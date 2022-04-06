@@ -1,0 +1,189 @@
+.navigation{
+    background-color: white;
+    box-shadow: 0 4px 6px -6px #222;
+}
+#brand{
+    color: #146eb3;
+    font-weight: 900;
+    letter-spacing: 9px;
+    font-size: 36px;
+}
+#collasible-nav-dropdown{
+    background-color: #146eb3;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+}
+#collasible-nav-dropdown:hover{
+    background-color: white;
+    border: 1px solid #146eb3;
+    color: #146eb3
+}
+#nav-subdropdown{
+    color: #146eb3;
+    font-weight: 500;
+}
+#nav-subdropdown:hover{
+    background-color: #146eb3;
+    color: white;
+    font-weight: 500;
+}
+#CreateAcc_btn{
+    border: 1px solid #01aa95;
+    color: #01AA95;
+    background: linear-gradient(to right, #01aa95 50% , white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    margin-right: 1em;
+}
+#CreateAcc_btn:hover{
+    color: white;
+    font-weight: 500;
+    background-position: left bottom;  
+}
+
+/* Slider */
+#Carosel{
+    position: relative;
+}
+#Caption{
+    position: absolute;
+    bottom: 25%
+}
+#Caption h3{
+    color: #146eb3;
+    font-weight: 900;
+}
+#Caption p{
+    color: black;
+    font-weight: 100;
+}
+#watchVideo_btn{
+    border: 1px solid #146eb3;
+    color: #146eb3;
+    font-size: 100%;
+}
+/* About */
+.About_container{
+    background-color: #f4f4f4;
+    padding-bottom: 5%;
+}
+#card1, #card2, #card3{
+    margin : 0 auto;
+    border: none;
+    background-color: #f4f4f4;
+}
+#card1 i, #card2 i, #card3 i{
+    color: #01aa95;
+    font-size: 36px;
+}
+#card1 i:hover, #card2 i:hover, #card3 i:hover{
+    transform: rotate(70deg);
+    transition-duration: 1s;
+}
+#card1 #title, #card2 #title, #card3 #title{
+    color: black;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.Aboutsection_heading{
+    text-align: center;
+    padding-top: 5%;
+    /* border: 1px solid red; */
+}
+.Aboutsection_heading h6{
+    color: black;
+    font-weight: 900;
+    font-size: 32px;
+}
+.Aboutsection_heading p{
+    color: black;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+/* Ebooks */
+.ebooks_pros{
+    /* border: 1px solid red; */
+    margin: 20% auto;
+}
+.ebooks_pros h6{
+    color: black;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+}
+.ebooks_pros p{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.ebooks_pros p i{
+    color: #01aa95;
+    font-size: 20px;
+}
+/* Tution */
+.tution_pros{
+    /* border: 1px solid red; */
+    margin: 20% auto;
+    padding-left: 20%;
+}
+.tution_pros h6{
+    color: black;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+}
+.tution_pros p{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.tution_pros p i{
+    color: #01aa95;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 591px) {
+    #brand{
+        font-size: 28px;
+    }
+    #CreateAcc_btn{
+        border: 1px solid #01aa95;
+        color: #01AA95;
+        background: linear-gradient(to right, #01aa95 50% , white 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
+        margin : 0px 0px 1em 0px
+    }
+    #CreateAcc_btn:hover{
+        color: white;
+        font-weight: 500;
+        background-position: left bottom;  
+    }
+    #Caption{
+        top: 3vh
+    }
+    #Caption h3 {
+      font-size: 80%;
+    }
+    #Caption p{
+        font-size: 50%;
+    }
+    #watchVideo_btn{
+        font-size: 60%;
+    }
+    .ebooks_pros{
+        /* border: 1px solid red; */
+        margin: 10% auto;
+        text-align: center;
+    }
+    .tution_pros{
+        /* border: 1px solid red; */
+        margin: 10% auto;
+        text-align: center;
+        padding-left: 0;
+    }
+}
