@@ -1,6 +1,6 @@
 import React from "react";
 import {Carousel, Button} from 'react-bootstrap';
-import hero from '../Assets/hero1.jpg';
+import hero from '../Assets/hero1.svg';
 
 import '../Styles/Style.css';
 

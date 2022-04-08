@@ -24,8 +24,9 @@
     font-weight: 500;
 }
 #nav-subdropdown:hover{
-    background-color: #146eb3;
-    color: white;
+    /* background-color: #146eb3; */
+    
+    text-decoration: none;
     font-weight: 500;
 }
 #CreateAcc_btn{
@@ -52,16 +53,19 @@
     bottom: 25%
 }
 #Caption h3{
-    color: #146eb3;
+    /* color: #146eb3; */
+    color: white;
     font-weight: 900;
 }
 #Caption p{
-    color: black;
+    color: white;
     font-weight: 100;
 }
 #watchVideo_btn{
-    border: 1px solid #146eb3;
-    color: #146eb3;
+    /* border: 1px solid #146eb3;
+    color: #146eb3; */
+    border: 1px solid white;
+    color: white;
     font-size: 100%;
 }
 /* About */
@@ -144,6 +148,50 @@
     font-size: 20px;
 }
 
+/* Contact */
+.contactContainer{
+    border: 1px solid #f4f4f4;
+    background-color: #f4f4f4;
+    height: 40vh;
+    position: relative;
+}
+.contactCard{
+    margin: 10vh auto;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    width: 50vw;
+    height: 20vh;
+    text-align: center;
+    /* line-height: 20vh; */
+    background-color: #01aa95;
+}
+.contactCard h6{
+    color: white;
+    font-weight: 900;
+    font-size: x-large;
+    letter-spacing: 2px;
+    /* padding: 5% 0% 5% 0% */
+    padding: 5vh;
+}
+.contactHeading{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 15%;
+    left: 26%;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid #01aa95;
+}
+.contactHeading h6{
+    font-size: xx-large;
+    font-weight: 900;
+    color: #01AA95;
+    letter-spacing: 2px;
+    /* transform: rotate(-90deg); */
+    /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white; */
+}
 
 @media screen and (max-width: 591px) {
     #brand{
@@ -185,5 +233,33 @@
         margin: 10% auto;
         text-align: center;
         padding-left: 0;
+    }
+    .contactCard{
+        margin: 10vh auto;
+        /* border: 1px solid red; */
+        border-radius: 20px;
+        width: 70vw;
+        height: 20vh;
+        text-align: center;
+        /* line-height: 20vh; */
+        background-color: #01aa95;
+    }
+    .contactCard h6{
+        color: white;
+        font-weight: 600;
+        font-size: large;
+        /* line-height: 20%; */
+        letter-spacing: 2px;
+        /* padding: 10vh 0% 5% 0% */
+    }
+    .contactHeading{
+        /* border: 1px solid red; */
+        position: absolute;
+        top: 15%;
+        left: 22%;
+        padding: 2px;
+        border-radius: 10px;
+        background-color: white;
+        border: 2px solid #01aa95;
     }
 }
