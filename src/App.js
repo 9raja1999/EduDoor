@@ -18,7 +18,7 @@ function App() {
     <UserAuthContextProvider>
       <Router basename='/EduDoor'>
           <Routes>
-            <Route exact path='' element={<Home />} />
+            <Route exact path="" element={<Home />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/login' element={<Login />} />
             <Route 
