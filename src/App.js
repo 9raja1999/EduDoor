@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route,HashRouter} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
 import Home from './Pages/Home';
 import Signup from './Pages/Signup';
@@ -16,9 +16,9 @@ import './App.css';
 function App() {
   return (
     <UserAuthContextProvider>
-      <Router>
-          <Routes >
-            <Route path='/EduDoor' exact element={<Home />} />
+      <Router basename='/EduDoor'>
+          <Routes>
+            <Route exact path='' element={<Home />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/login' element={<Login />} />
             <Route 

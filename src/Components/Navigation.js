@@ -16,7 +16,7 @@ function Navigation() {
   return (
     <Navbar className="navigation" collapseOnSelect expand="lg" sticky="top">
       <Container>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="" style={{ textDecoration: "none" }}>
           <Navbar.Brand id="brand">EDUDOOR</Navbar.Brand>
         </Link>
         <Navbar.Toggle
