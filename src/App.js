@@ -19,10 +19,10 @@ function App() {
       <Router>
           <Routes >
             <Route path='/EduDoor' exact element={<Home />} />
-            <Route path='/EduDoor/signup' element={<Signup />} />
-            <Route path='/EduDoor/login' element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/login' element={<Login />} />
             <Route 
-                  path='/EduDoor/Dashboard'
+                  path='/Dashboard'
                   element={
                     <ProtectedRoute>
                       <Dashboard />
