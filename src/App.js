@@ -1,5 +1,5 @@
 import React from 'react';
-import {Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
 import Home from './Pages/Home';
 import Signup from './Pages/Signup';
@@ -16,12 +16,13 @@ import './App.css';
 function App() {
   return (
     <UserAuthContextProvider>
+      <Router>
           <Routes >
-            <Route path='/' element={<Home />} />
-            <Route path='/signup' element={<Signup />} />
-            <Route path='/login' element={<Login />} />
+            <Route path='/EduDoor' exact element={<Home />} />
+            <Route path='/EduDoor/signup' element={<Signup />} />
+            <Route path='/EduDoor/login' element={<Login />} />
             <Route 
-                  path='/Dashboard'
+                  path='/EduDoor/Dashboard'
                   element={
                     <ProtectedRoute>
                       <Dashboard />
@@ -29,6 +30,7 @@ function App() {
                   } 
             />
           </Routes>
+      </Router>
     </UserAuthContextProvider>
   );
 }
