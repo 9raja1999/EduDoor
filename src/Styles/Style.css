@@ -286,11 +286,6 @@ figure.snip1192 {
     /* min-height: 60vh; */
     padding-top: 20%;
 }
-.Collaboration_column2{
-    /* background-color: #146eb3;
-    border-radius: 25% 0px 0px 25%; */
-
-}
 .Collaboration_column2 .Collaboration_images{
     /* border: 1px solid brown; */
     display: flex;
@@ -307,6 +302,7 @@ figure.snip1192 {
     width : 100%
 }
 
+/* footer */
 
 
 @media screen and (max-width: 591px) {
