@@ -16,7 +16,10 @@ import './App.css';
 function App() {
   return (
     <UserAuthContextProvider>
-          <Routes>
+          <Routes >
+            <Route path='/' element={<Home />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/login' element={<Login />} />
             <Route 
                   path='/Dashboard'
                   element={
@@ -25,9 +28,6 @@ function App() {
                     </ProtectedRoute>
                   } 
             />
-            <Route path='/' element={<Home />} />
-            <Route path='/signup' element={<Signup />} />
-            <Route path='/login' element={<Login />} />
           </Routes>
     </UserAuthContextProvider>
   );
