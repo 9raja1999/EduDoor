@@ -68,6 +68,13 @@
     color: white;
     font-size: 100%;
 }
+#watchVideo_btn:hover{
+    background-color: white;
+    color: #146eb3;
+    font-weight: bold;
+    font-size: 100%;
+    text-transform: uppercase;
+} 
 /* About */
 .About_container{
     background-color: #f4f4f4;
@@ -149,49 +156,158 @@
 }
 
 /* Contact */
-.contactContainer{
-    border: 1px solid #f4f4f4;
-    background-color: #f4f4f4;
-    height: 40vh;
-    position: relative;
+.TestimonialContainer{
+    background-color: #146eb3;
 }
-.contactCard{
-    margin: 10vh auto;
-    /* border: 1px solid red; */
-    border-radius: 20px;
-    width: 50vw;
-    height: 20vh;
+.Testimonial_column{
     text-align: center;
-    /* line-height: 20vh; */
-    background-color: #01aa95;
 }
-.contactCard h6{
+.testimonial_Row{
+    padding-bottom: 5%;
+}
+.Testimonial_heading{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    /* border: 1px solid red; */
+}
+.Testimonial_heading h6{
     color: white;
     font-weight: 900;
-    font-size: x-large;
-    letter-spacing: 2px;
-    /* padding: 5% 0% 5% 0% */
-    padding: 5vh;
+    font-size: 32px;
 }
-.contactHeading{
-    /* border: 1px solid red; */
+.Testimonial_heading hr{
+    border: 5px solid white;
+    width: 20%;
+    margin: 2% auto;
+    border-radius: 15px;
+}
+figure.snip1192 {
+    font-family: 'Raleway', Arial, sans-serif;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    /* margin: 10px; */
+    min-width: 220px;
+    max-width: 310px;
+    width: 100%;
+    color: #333;
+    text-align: left;
+    box-shadow: none !important;
+  }
+  figure.snip1192 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  figure.snip1192 img {
+    max-width: 100%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+  }
+  figure.snip1192 blockquote {
+    margin: 0;
+    display: block;
+    border-radius: 8px;
+    position: relative;
+    background-color: #fafafa;
+    padding: 30px 50px 65px 50px;
+    font-size: 0.8em;
+    font-weight: 500;
+    margin: 0 0 -50px;
+    line-height: 1.6em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  }
+  figure.snip1192 blockquote:before,
+  figure.snip1192 blockquote:after {
+    font-family: 'FontAwesome';
+    content: "\201C";
     position: absolute;
-    top: 15%;
-    left: 26%;
-    padding: 2px;
-    border-radius: 10px;
-    background-color: white;
-    border: 2px solid #01aa95;
+    font-size: 50px;
+    opacity: 0.3;
+    font-style: normal;
+  }
+  figure.snip1192 blockquote:before {
+    top: 35px;
+    left: 20px;
+  }
+  figure.snip1192 blockquote:after {
+    content: "\201D";
+    right: 20px;
+    bottom: 35px;
+  }
+  figure.snip1192 .author {
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+  }
+  figure.snip1192 .author h5 {
+    opacity: 0.8;
+    margin: 0;
+    font-weight: 800;
+  }
+  figure.snip1192 .author h5 span {
+    font-weight: 400;
+    text-transform: none;
+    display: block;
+  }
+  
+/* Collaboration Section  */
+.Collaboration_heading{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    /* border: 1px solid red; */
 }
-.contactHeading h6{
-    font-size: xx-large;
+.Collaboration_images{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    /* border: 1px solid red; */
+}
+.Collaboration_heading h6{
+    color: #146eb3;
     font-weight: 900;
-    color: #01AA95;
-    letter-spacing: 2px;
-    /* transform: rotate(-90deg); */
-    /* -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white; */
+    font-size: 32px;
 }
+.Collaboration_heading hr{
+    border: 5px solid #146eb3;
+    width: 20%;
+    margin: 2% auto;
+    border-radius: 15px;
+}
+.Collaboration_column .Collaboration_heading{
+    /* border: 1px solid brown; */
+    /* min-height: 60vh; */
+    padding-top: 20%;
+}
+.Collaboration_column2{
+    /* background-color: #146eb3;
+    border-radius: 25% 0px 0px 25%; */
+
+}
+.Collaboration_column2 .Collaboration_images{
+    /* border: 1px solid brown; */
+    display: flex;
+    justify-content: space-around;
+    /* min-height: 60vh; */
+    margin: 0px;
+    padding-top: 5%;
+}
+.Collaboration_column2 .Collaboration_images .images{
+    /* border: 1px solid green; */
+    width : 25%
+}
+.Collaboration_column2 .Collaboration_images .images img{
+    width : 100%
+}
+
+
 
 @media screen and (max-width: 591px) {
     #brand{
@@ -204,7 +320,9 @@
         background-size: 200% 100%;
         background-position: right bottom;
         transition: all .5s ease-out;
-        margin : 0px 0px 1em 0px
+        margin-left: 30%;
+        margin-bottom: 5%;
+        /* margin : 0 auto */
     }
     #CreateAcc_btn:hover{
         color: white;
@@ -234,32 +352,5 @@
         text-align: center;
         padding-left: 0;
     }
-    .contactCard{
-        margin: 10vh auto;
-        /* border: 1px solid red; */
-        border-radius: 20px;
-        width: 70vw;
-        height: 20vh;
-        text-align: center;
-        /* line-height: 20vh; */
-        background-color: #01aa95;
-    }
-    .contactCard h6{
-        color: white;
-        font-weight: 600;
-        font-size: large;
-        /* line-height: 20%; */
-        letter-spacing: 2px;
-        /* padding: 10vh 0% 5% 0% */
-    }
-    .contactHeading{
-        /* border: 1px solid red; */
-        position: absolute;
-        top: 15%;
-        left: 22%;
-        padding: 2px;
-        border-radius: 10px;
-        background-color: white;
-        border: 2px solid #01aa95;
-    }
+  
 }

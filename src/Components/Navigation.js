@@ -16,8 +16,13 @@ function Navigation() {
   return (
     <Navbar className="navigation" collapseOnSelect expand="lg" sticky="top">
       <Container>
-        <Navbar.Brand id="brand">EDUDOOR</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Navbar.Brand id="brand">EDUDOOR</Navbar.Brand>
+        </Link>
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          style={{ backgroundColor: "#146eb3", color: "white" }}
+        />
         <Navbar.Collapse
           id="responsive-navbar-nav"
           className="justify-content-end"
@@ -31,7 +36,12 @@ function Navigation() {
 
             <NavDropdown title="Login" id="collasible-nav-dropdown">
               <NavDropdown.Item id="nav-subdropdown">
-                <Link to="/login" style={{textDecoration:'none',color:'#146eb3'}}>Student</Link>
+                <Link
+                  to="/login"
+                  style={{ textDecoration: "none", color: "#146eb3" }}
+                >
+                  Student
+                </Link>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

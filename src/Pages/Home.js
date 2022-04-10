@@ -4,7 +4,9 @@ import Slider from '../Components/Slider';
 import About from '../Views/About';
 import Ebooks from '../Views/Ebooks';
 import Tution from '../Views/Tution';
-import Contact from '../Views/Contact';
+import Testimonial from '../Views/Testimonial';
+import Collaboration from '../Views/Collaboration';
+import Footer from '../Views/Footer';
 
 import '../Styles/Style.css';
 
@@ -16,7 +18,9 @@ function Home(){
         <About />
         <Ebooks />
         <Tution />
-        <Contact />
+        <Testimonial />
+        <Collaboration />
+        <Footer />
       </div>
     );
 }

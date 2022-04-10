@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Navigation from "../Components/Navigation";
 import GoogleButton from "react-google-button";
 import { Form, Button, Card, Container, Alert } from "react-bootstrap";
 import { useUserAuth } from "../Context/UserAuthContext";
@@ -35,9 +36,11 @@ function Login() {
   }
   return (
     // <AuthProvider>
+    <>
+    <Navigation />
     <Container
       className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
+      style={{ minHeight: "80vh" }}
     >
       <div className="w-100" style={{ maxWidth: "400px" }}>
         <Card>
@@ -75,6 +78,7 @@ function Login() {
         </div>
       </div>
     </Container>
+    </>
     // </AuthProvider>
   );
 }

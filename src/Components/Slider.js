@@ -6,7 +6,7 @@ import '../Styles/Style.css';
 
 function Slider() {
   return (
-          <Carousel id='Carousel'>
+          <Carousel id='Carousel' controls={false} indicators={false}>
             <Carousel.Item>
               <img className="d-block w-100" src={hero} alt="First slide" />
               <Carousel.Caption id='Caption'>
@@ -14,7 +14,7 @@ function Slider() {
                 <p>
                     Deliver differentiated practice aligned to ELA and math standards
                 </p>
-                <Button variant='custom' id='watchVideo_btn'><i className="fa fa-play"></i>Meet Edudoor</Button>
+                <Button variant='custom' id='watchVideo_btn'><i className="fa fa-play"></i> Meet Edudoor</Button>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>

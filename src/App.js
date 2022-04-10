@@ -10,6 +10,8 @@ import ProtectedRoute from './Routes/ProtectedRoute';
 
 import {UserAuthContextProvider} from './Context/UserAuthContext';
 
+import './App.css';
+
 
 function App() {
   return (

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Button, Card, Container, Alert } from "react-bootstrap";
+import Navigation from '../Components/Navigation';
 import { useUserAuth } from "../Context/UserAuthContext";
 
 function Signup() {
@@ -22,9 +23,11 @@ function Signup() {
   };
   return (
     // <AuthProvider>
+    <>
+    <Navigation />
     <Container
       className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
+      style={{ minHeight: "80vh" }}
     >
       <div className="w-100" style={{ maxWidth: "400px" }}>
         <Card>
@@ -61,6 +64,7 @@ function Signup() {
         </div>
       </div>
     </Container>
+    </>
     // </AuthProvider>
   );
 }
