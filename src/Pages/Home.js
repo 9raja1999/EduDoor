@@ -4,8 +4,10 @@ import Slider from '../Components/Slider';
 import About from '../Views/About';
 import Ebooks from '../Views/Ebooks';
 import Tution from '../Views/Tution';
+import VideoLectures from '../Views/VideoLectures';
 import Testimonial from '../Views/Testimonial';
 import Collaboration from '../Views/Collaboration';
+import GetInTouch from '../Views/GetInTouch';
 import Footer from '../Views/Footer';
 
 import '../Styles/Style.css';
@@ -18,8 +20,10 @@ function Home(){
         <About />
         <Ebooks />
         <Tution />
+        <VideoLectures />
         <Testimonial />
         <Collaboration />
+        <GetInTouch />
         <Footer />
       </div>
     );

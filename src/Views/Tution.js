@@ -15,7 +15,7 @@ function Tution() {
   return (
     <Container fluid style={{}}>
       <Row>
-        <Col xd={12} md={5}>
+        <Col xs={12} md={5}>
           <div className="tution_pros">
             <h6>Tuition on Request</h6>
             {tutionKeys.map((obj, idx) => {
@@ -27,7 +27,7 @@ function Tution() {
             })}
           </div>
         </Col>
-        <Col xd={12} md={7} style={{ textAlign: "center" }} className="order-first order-md-last">
+        <Col xs={12} md={7} style={{ textAlign: "center" }} className="order-first order-md-last">
           <img
             src={Ebook}
             className=" hover-shadow shadow-4"

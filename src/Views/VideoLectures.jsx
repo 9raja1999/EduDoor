@@ -1,12 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Container, Row, Col } from "react-bootstrap";
-
+import React from 'react';
+import {Container, Row, Col} from 'react-bootstrap'
 import Ebook from '../Assets/ebook.png';
-import '../Styles/Style.css'
 
-function Ebooks() {
-  const ebookKeys = [
+function VideoLectures(){
+    const videoKeys = [
         {description :'One device many books'},
         {description :'Accessible Everywhere'},
         {description :'Easy on the eyes'},
@@ -24,9 +21,9 @@ function Ebooks() {
           />
         </Col>
         <Col xs={12} md={5}>
-          <div className="ebooks_pros">
-            <h6>Ebooks</h6>
-            {ebookKeys.map((obj, idx) => {
+          <div className="videoLectures_pros">
+            <h6>Video Lectures</h6>
+            {videoKeys.map((obj, idx) => {
               return (
                 <p>
                   <i className="fa fa-check"></i> {obj.description}
@@ -37,7 +34,7 @@ function Ebooks() {
         </Col>
       </Row>
     </Container>
-  );
+  )
 }
 
-export default Ebooks;
+export default VideoLectures;

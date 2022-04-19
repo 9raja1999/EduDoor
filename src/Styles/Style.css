@@ -155,7 +155,30 @@
     font-size: 20px;
 }
 
-/* Contact */
+
+/* Video Lectures */
+.videoLectures_pros{
+    /* border: 1px solid red; */
+    margin: 20% auto;
+    padding-left: 20%;
+}
+.videoLectures_pros h6{
+    color: black;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+}
+.videoLectures_pros p{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.videoLectures_pros p i{
+    color: #01aa95;
+    font-size: 20px;
+}
+
+/* Testimonial */
 .TestimonialContainer{
     background-color: #146eb3;
 }
@@ -302,7 +325,13 @@ figure.snip1192 {
     width : 100%
 }
 
-/* footer */
+/* GetInTouch */
+
+.ContactColumn{
+    border : 1px solid red;
+    text-align: center;
+    margin: 0 auto;
+}
 
 
 @media screen and (max-width: 591px) {
