@@ -3,24 +3,25 @@
     box-shadow: 0 4px 6px -6px #222;
 }
 #brand{
-    color: #146eb3;
+    color: #072A52;
     font-weight: 900;
     letter-spacing: 9px;
     font-size: 36px;
 }
 #collasible-nav-dropdown{
-    background-color: #146eb3;
+    background-color: #FFC300;
     border-radius: 5px;
-    color: white;
-    font-weight: 500;
+    color: #072A52;
+
+    font-weight: 600;
 }
 #collasible-nav-dropdown:hover{
-    background-color: white;
-    border: 1px solid #146eb3;
-    color: #146eb3
+    background-color: #ffffff;
+    border: 1px solid #FFC300;
+    color: #072A52
 }
 #nav-subdropdown{
-    color: #146eb3;
+    color: #072A52;
     font-weight: 500;
 }
 #nav-subdropdown:hover{
@@ -119,7 +120,7 @@
     margin: 20% auto;
 }
 .ebooks_pros h6{
-    color: black;
+    color: #072A52;
     font-size: 26px;
     font-weight: 900;
     letter-spacing: 1px;
@@ -130,7 +131,7 @@
     letter-spacing: 1px;
 }
 .ebooks_pros p i{
-    color: #01aa95;
+    color: #FFC300;
     font-size: 20px;
 }
 /* Tution */
@@ -140,7 +141,7 @@
     padding-left: 20%;
 }
 .tution_pros h6{
-    color: black;
+    color: #072A52;
     font-size: 26px;
     font-weight: 900;
     letter-spacing: 1px;
@@ -151,7 +152,7 @@
     letter-spacing: 1px;
 }
 .tution_pros p i{
-    color: #01aa95;
+    color: #FFC300;
     font-size: 20px;
 }
 
@@ -163,7 +164,7 @@
     padding-left: 20%;
 }
 .videoLectures_pros h6{
-    color: black;
+    color: #072A52;
     font-size: 26px;
     font-weight: 900;
     letter-spacing: 1px;
@@ -174,13 +175,13 @@
     letter-spacing: 1px;
 }
 .videoLectures_pros p i{
-    color: #01aa95;
+    color: #FFC300;
     font-size: 20px;
 }
 
 /* Testimonial */
 .TestimonialContainer{
-    background-color: #146eb3;
+    background-color: #072A52;
 }
 .Testimonial_column{
     text-align: center;
@@ -200,7 +201,8 @@
     font-size: 32px;
 }
 .Testimonial_heading hr{
-    border: 5px solid white;
+    border: 5px solid #FFC300;
+    background-color: #FFC300;
     width: 20%;
     margin: 2% auto;
     border-radius: 15px;
@@ -237,7 +239,7 @@ figure.snip1192 {
     display: block;
     border-radius: 8px;
     position: relative;
-    background-color: #fafafa;
+    background-color: #FFC300;
     padding: 30px 50px 65px 50px;
     font-size: 0.8em;
     font-weight: 500;
@@ -294,12 +296,12 @@ figure.snip1192 {
     /* border: 1px solid red; */
 }
 .Collaboration_heading h6{
-    color: #146eb3;
+    color: #072A52;
     font-weight: 900;
     font-size: 32px;
 }
 .Collaboration_heading hr{
-    border: 5px solid #146eb3;
+    border: 5px solid #072A52;
     width: 20%;
     margin: 2% auto;
     border-radius: 15px;
@@ -327,12 +329,201 @@ figure.snip1192 {
 
 /* GetInTouch */
 
-.ContactColumn{
-    border : 1px solid red;
+.footerNav{
+    /* background-color: #072A52; */
+    border-top: 5px solid #FFC300;
+    position: relative;
+}
+.footerNav #brand{
+    color: white;
+    font-weight: 900;
+    letter-spacing: 9px;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+.social{
+    color: white;
+    font-weight: 900;
+    font-size: 26px;
+    /* border: 2px solid white; */
+}
+.footerNav .JoinNowText{
+    border: 1px solid white;
+    width : 40%;
+    height: 10vh;
+    background-color: white;
+    /* line-height: 10vh; */
+    border-radius: 45px;
     text-align: center;
-    margin: 0 auto;
+    position: absolute;
+    top : -40%;
+    left : 30%;
+    /* border: 1px solid #222; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.footerNav .JoinNowText .joinNow-heading{
+    color: #072A52;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.footerNav .JoinNowText .joinNow-heading span{
+    color:#FFC300
 }
 
+
+.footerNavContactForm .formHeading{
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+.footerNavContactForm .inputs{
+    /* border : 2px solid red; */
+    border-radius: 25px;
+    padding: 10px;
+    border : none
+}
+.footerNavContactForm .submitButton{
+    background-color: white;
+    color: #146eb3;
+    /* font-weight: 500; */
+    text-transform: capitalize;
+    border-radius: 25px;
+    border: none;
+    width: 20%;
+    padding: 10px;
+}
+.footerNavContactForm .submitButton:hover{
+    background-color: #072A52;
+    border: 2px solid white;
+    color: white
+}
+.subscribeWithMail{
+    /* border : 1px solid red; */
+    border-radius: 25px;
+    position: relative;
+}
+.subscribeWithMail .SubscribeInput{
+    border-radius: 25px;
+    padding: 10px;
+}
+.subscribeWithMail .SubecribeButton{
+    position: absolute;
+    top: 0px;
+    right : 0px;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #FFC300;
+    width: 40%;
+    margin: 1px;
+    border: none;
+    color: #072A52;
+    text-transform: uppercase;
+}
+.subscribeWithMail .SubecribeButton:hover{
+    background-color: white;
+    border: 1px solid #072A52;
+    margin: 1px;
+    color: #072A52
+}
+.footerNavContactForm .list{
+    /* border: 1px solid red; */
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+.footerNavContactForm .list div{
+    /* border: 1px solid red; */
+    /* background-color: #01aa95; */
+    width: 40%;
+}
+.footerNavContactForm .list div ul{
+    list-style-type: none;
+    color: white;
+    font-weight: 200;
+}
+.footerNavContactForm .list div ul li h6{
+    font-weight: 800;
+}
+/* Company About */
+.companyAbout{
+    background-image: url(../Assets/Companybg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.companyAbout h1{
+    font-weight: 900;
+    color: #072A52;
+    letter-spacing: 1px;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+.companyAbout h1 span{
+    color: #FFC300
+}
+.companyAbout p{
+    text-align: justify;
+}
+
+
+/* 24/7 Contact form */
+.ContactPage{
+    background-image: url(../Assets/Companybg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.twentyFourContact h1{
+    font-weight: 900;
+    color: #FFC300;
+    letter-spacing: 1px;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align:center;
+}
+.twentyFourContact h1 span{
+    color : #072A52
+}
+.twentyFourContact p{
+    color: #ADB5BD;
+    text-align: center;
+}
+.twentyFourContact .submitMsg{
+    background-color: #072A52;
+    border-radius: 25px;
+    width: 30%;
+    padding: 10px;
+}
+.twentyFourContact .inputs{
+    border-radius: 25px;
+    padding: 10px;
+    /* border : none */
+}
+
+
+
+@media screen and (max-width: 900px){
+    .footerNav #brand{
+        margin: 0 auto;
+    }
+    .footerNav .socialIconsHolder{
+        margin : 0 auto
+    }
+    .footerNavContactForm .formHeading{
+        /* border : 1px solid red; */
+        text-align: center;
+    }
+    .footerNavContactForm .list div{
+        /* border: 1px solid red; */
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footerNav .JoinNowText{
+        visibility: hidden;
+    }
+}
 
 @media screen and (max-width: 591px) {
     #brand{
