@@ -1,19 +1,53 @@
 import React from 'react';
+import subscribeDataService from '../Services/SubscribeMailDB';
 import {Container, Form, Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom'
 
+const listStyle = {
+    fontWeight : '200',
+    color: 'white',
+    textDecoration: 'none'
+}
 function SubscriptionForm(){
-    const listStyle = {
-        fontWeight : '200',
-        color: 'white',
-        textDecoration: 'none'
+    const [subscriptionMail, setSubscriptionMail] = React.useState();
+    // Error Message
+    const [errorMessage, setErrorMessage] = React.useState({
+        error : false,
+        msg : ''
+    });
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setErrorMessage("");
+        if(subscriptionMail === ""){
+            setErrorMessage({error: true , msg : 'Email is mandatory for subscription'});
+            return;
+        }
+        const newMail = {
+            subscriptionMail
+        }
+        
+        try{
+            await subscribeDataService.subscribeMail(newMail);
+            setErrorMessage({error: false , msg: 'Your mail has been recieved'});
+        } catch(err){
+            setErrorMessage({error: true, msg : err.message});
+        }
+
+        // field empty after subscription of mail
+        setSubscriptionMail("")
     }
     return(
         <Container>
-            <Form>
+            <Form onSubmit={handleSubmit}>
               <Form.Group className="subscribeWithMail mt-5">
-                <Form.Control className="SubscribeInput" type="email" placeholder='Subscribe for mail'/>
-                <Button variant="danger" className="SubecribeButton">Subscribe</Button>
+                <Form.Control
+                    className="SubscribeInput"
+                    type="email"
+                    placeholder='Subscribe for mail'
+                    value = {subscriptionMail}
+                    onChange={(e)=>setSubscriptionMail(e.target.value)}
+                />
+                <Button variant="danger" className="SubecribeButton" type="Submit">Subscribe</Button>
               </Form.Group>
             </Form>
             <div className='list mt-5'>
