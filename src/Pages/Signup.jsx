@@ -30,10 +30,10 @@ function Signup() {
       className="d-flex align-items-center justify-content-center"
       style={{ minHeight: "80vh"}}
     >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+      <div className="w-100" style={{ maxWidth: "400px"}}>
         <Card>
-          <Card.Body>
-            <h2 className="text-center mb-3">Sign Up</h2>
+          <Card.Body className="signupDiv">
+            <h2 className="text-center mb-3">Sign <span>Up</span></h2>
             {error && <Alert variant="danger">{error}</Alert>}
 
             <Form onSubmit={handleSubmit}>
@@ -54,7 +54,7 @@ function Signup() {
               <Form.Group id="password-confirm" className="mb-3">
                 <Form.Control type="password" placeholder="Confirm password" />
               </Form.Group>
-              <Button className="w-100" type="submit">
+              <Button className="w-100 createAcc_btn" type="submit">
                 Create Account
               </Button>
             </Form>

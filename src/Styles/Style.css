@@ -44,7 +44,38 @@
     font-weight: 500;
     background-position: left bottom;  
 }
-
+/* Signup */
+.signupDiv{
+    background-image: url(../Assets//Companybg.svg);
+    background-size: cover;
+}
+.signupDiv h2{
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #072A52
+}
+.signupDiv h2 span{
+    color: #FFC300
+}
+.signupDiv .createAcc_btn{
+    background-color: #072A52
+}
+/* login */
+.loginDiv{
+    background-image: url(../Assets//Companybg.svg);
+    background-size: cover;
+}
+.loginDiv h2{
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #072A52
+}
+.loginDiv h2 span{
+    color: #FFC300
+}
+.loginDiv .login_btn{
+    background-color: #072A52
+}
 /* Slider */
 #Carosel{
     position: relative;
@@ -115,6 +146,11 @@
     letter-spacing: 1px;
 }
 /* Ebooks */
+.sectionsHolder{
+    background-image: url(../Assets/Companybg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .ebooks_pros{
     /* border: 1px solid red; */
     margin: 20% auto;

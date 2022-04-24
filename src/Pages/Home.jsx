@@ -18,9 +18,11 @@ function Home(){
         <Navigation />
         <Slider />
         <About />
-        <Ebooks />
-        <Tution />
-        <VideoLectures />
+        <div className='sectionsHolder'>
+          <Ebooks />
+          <Tution />
+          <VideoLectures />
+        </div>
         <Testimonial />
         <Collaboration />
         <GetInTouch />

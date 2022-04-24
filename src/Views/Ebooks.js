@@ -13,7 +13,7 @@ function Ebooks() {
         {description :'Affordable in the long run'}
     ] 
   return (
-    <Container fluid style={{}}>
+    <Container fluid className="ebookContainer">
       <Row>
         <Col xs={12} md={7} style={{ textAlign: "center"}}>
           <img

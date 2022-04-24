@@ -44,9 +44,9 @@ function Login() {
       style={{ minHeight: "80vh" }}
     >
       <div className="w-100" style={{ maxWidth: "400px" }}>
-        <Card>
+        <Card className="loginDiv">
           <Card.Body>
-            <h2 className="text-center mb-3">LogIn</h2>
+            <h2 className="text-center mb-3">Log<span>In</span></h2>
             {error && <Alert variant="danger">{error}</Alert>}
 
             <Form onSubmit={handleSubmit}>
@@ -64,7 +64,7 @@ function Login() {
                   onChange={(e)=>setPassword(e.target.value)}
                 />
               </Form.Group>
-              <Button className="w-100" type="submit">
+              <Button className="w-100 login_btn" type="submit">
                 Login
               </Button>
               <hr />
