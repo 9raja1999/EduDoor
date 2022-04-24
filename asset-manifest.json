@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/EduDoor/static/css/main.5dbf9299.css",
-    "main.js": "/EduDoor/static/js/main.0819e736.js",
+    "main.js": "/EduDoor/static/js/main.5a7a602f.js",
     "static/media/schools.png": "/EduDoor/static/media/schools.8827a5efb45e1db5cf36.png",
     "static/media/ebook.png": "/EduDoor/static/media/ebook.64111fe89cb779313b63.png",
     "static/media/Companybg.svg": "/EduDoor/static/media/Companybg.0417c875b67c4f7ebb02.svg",
     "index.html": "/EduDoor/index.html",
     "static/media/hero1.svg": "/EduDoor/static/media/hero1.acc33f5f589b4ecf6017539e7142d32b.svg",
     "main.5dbf9299.css.map": "/EduDoor/static/css/main.5dbf9299.css.map",
-    "main.0819e736.js.map": "/EduDoor/static/js/main.0819e736.js.map"
+    "main.5a7a602f.js.map": "/EduDoor/static/js/main.5a7a602f.js.map"
   },
   "entrypoints": [
     "static/css/main.5dbf9299.css",
-    "static/js/main.0819e736.js"
+    "static/js/main.5a7a602f.js"
   ]
 }
