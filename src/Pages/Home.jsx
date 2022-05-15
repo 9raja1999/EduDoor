@@ -1,34 +1,50 @@
-import React from 'react';
-import Navigation from '../Components/Navigation';
-import Slider from '../Components/Slider';
-import About from '../Views/About';
-import Ebooks from '../Views/Ebooks';
-import Tution from '../Views/Tution';
-import VideoLectures from '../Views/VideoLectures';
-import Testimonial from '../Views/Testimonial';
-import Collaboration from '../Views/Collaboration';
-import GetInTouch from '../Views/GetInTouch';
-import Footer from '../Views/Footer';
+import React, { useEffect } from "react";
+import Navigation from "../Components/Navigation";
+import Slider from "../Components/Slider";
+import About from "../Views/About";
+import Ebooks from "../Views/Ebooks";
+import Tution from "../Views/Tution";
+import VideoLectures from "../Views/VideoLectures";
+import Testimonial from "../Views/Testimonial";
+import Collaboration from "../Views/Collaboration";
+import GetInTouch from "../Views/GetInTouch";
+import Footer from "../Views/Footer";
+import PositionHolders from "../Views/PositionHolders";
+import Rateus from "../Components/Rateus";
+import {Modal} from 'react-bootstrap'
 
-import '../Styles/Style.css';
+import "../Styles/Style.css";
 
-function Home(){
-    return (
-      <div>
-        <Navigation />
-        <Slider />
-        <About />
-        <div className='sectionsHolder'>
-          <Ebooks />
-          <Tution />
-          <VideoLectures />
-        </div>
-        <Testimonial />
-        <Collaboration />
-        <GetInTouch />
-        <Footer />
+function Home() {
+  const [show, setShow] = React.useState(false);
+  
+  useEffect(()=>{
+    setTimeout(()=>{
+      setShow(true)
+    },5000)
+  },[])
+
+  return (
+    <div>
+      <Rateus
+        show = {show}
+        setShow = {setShow}
+      />
+      <Navigation />
+      <Slider />
+      <About />
+      <div className="sectionsHolder">
+        <Ebooks />
+        <Tution />
+        <VideoLectures />
       </div>
-    );
+      <Testimonial />
+      <Collaboration />
+      <PositionHolders />
+      <GetInTouch />
+      <Footer />
+    </div>
+  );
 }
 
 export default Home;

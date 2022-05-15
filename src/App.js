@@ -6,7 +6,11 @@ import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import Company from './Pages/Company';
 import Contact from './Pages/Contact';
+// protected routes
 import Dashboard from './Pages/Dashboard';
+import TutionRequest from './Pages/TutionRequest';
+import DownloadBooks from './Pages/DownloadBooks';
+import Lectures from './Pages/Lectures';
 // importing Protected Routes
 import ProtectedRoute from './Routes/ProtectedRoute';
 
@@ -33,6 +37,32 @@ function App() {
                     </ProtectedRoute>
                   } 
             />
+            <Route
+                  path='/Tution'
+                  element={
+                    <ProtectedRoute>
+                      <TutionRequest />
+                    </ProtectedRoute>
+                  }
+            />
+            <Route
+                  path='/DownloadBooks'
+                  element={
+                    <ProtectedRoute>
+                      <DownloadBooks />
+                    </ProtectedRoute>
+                  }
+            />
+            <Route
+                  path='/Lectures'
+                  element={
+                    <ProtectedRoute>
+                      <Lectures />
+                    </ProtectedRoute>
+                  }
+            />
+
+
           </Routes>
       </Router>
     </UserAuthContextProvider>

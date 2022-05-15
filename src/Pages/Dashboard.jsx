@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+import {useNavigate} from 'react-router-dom';
 import { Row, Col, Container, Card, Button } from "react-bootstrap";
 import UserNavigation from "../Components/UserNavigation";
 import Footer from "../Views/Footer";
 import "../Styles/Dashboard.css";
 
 function Dashboard() {
+    const [request, setRequest] = React.useState('');
+    const navigate = useNavigate();
     const [cards, setCards] = React.useState([
         {
             title: 'Tutions',
@@ -25,6 +28,18 @@ function Dashboard() {
             button: 'Request of lectures'
         },
     ]);
+
+    useEffect(()=>{
+        // console.log(request.toLocaleLowerCase().replace(/\s/g, ""));
+        if(request.toLocaleLowerCase().replace(/\s/g, "")=='tutions'){
+            navigate('/Tution')
+        }else if(request.toLocaleLowerCase().replace(/\s/g, "")=='downloadbooks'){
+            navigate('/DownloadBooks')
+        }else if(request.toLocaleLowerCase().replace(/\s/g, "")=='videolectures'){
+            navigate('/Lectures')
+        }
+    },[request]);
+
     return (
         <>
             <Container
@@ -32,10 +47,8 @@ function Dashboard() {
                 className="dashboardContainer"
                 style={{ minHeight: "100vh" }}
             >
-                <Row style={{ backgroundColor: "white" }}>
-                    <Col xs={12} md={12} lg={12}>
+                <Row>
                         <UserNavigation />
-                    </Col>
                 </Row>
                 <Row>
                     <Col xs={12} md={12} lg={12} className="AskQuestion_Column mt-5">
@@ -58,7 +71,15 @@ function Dashboard() {
                                                     obj.description
                                                 }
                                             </Card.Text>
-                                            <Button className="request_btn" variant="custom">
+                                            <Button
+                                                className="request_btn"
+                                                variant="custom"
+                                                onClick={
+                                                    ()=>{
+                                                        setRequest(obj.title)
+                                                    }
+                                                }
+                                            >
                                                 {obj.button} <i className="fa fa-arrow-right"></i>
                                             </Button>
                                         </Card.Body>

@@ -74,7 +74,6 @@
 .cardContainer .request_btn:hover{
     background-color: white;
     border: 2px solid #FFC300;
-    font-weight: 800;
 }
 @media screen and (max-width: 900px) {
     .userNavigation #myBrand{

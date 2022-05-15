@@ -118,7 +118,7 @@
     background-color: #f4f4f4;
 }
 #card1 i, #card2 i, #card3 i{
-    color: #01aa95;
+    color: #FFC300;
     font-size: 36px;
 }
 #card1 i:hover, #card2 i:hover, #card3 i:hover{
@@ -126,9 +126,14 @@
     transition-duration: 1s;
 }
 #card1 #title, #card2 #title, #card3 #title{
-    color: black;
+    color: #072A52;
+    text-transform: capitalize;
     font-weight: 900;
-    letter-spacing: 1px;
+    /* font-size: 26px; */
+    /* letter-spacing: 1px; */
+}
+#card1 #descrip, #card2 #descrip, #card3 #descrip{
+    text-align: justify;
 }
 .Aboutsection_heading{
     text-align: center;
@@ -216,9 +221,9 @@
 }
 
 /* Testimonial */
-.TestimonialContainer{
+/* .TestimonialContainer{
     background-color: #072A52;
-}
+} */
 .Testimonial_column{
     text-align: center;
 }
@@ -232,13 +237,13 @@
     /* border: 1px solid red; */
 }
 .Testimonial_heading h6{
-    color: white;
+    color: #072A52;
     font-weight: 900;
     font-size: 32px;
 }
 .Testimonial_heading hr{
-    border: 5px solid #FFC300;
-    background-color: #FFC300;
+    border: 5px solid #072A52;
+    background-color: #072A52;
     width: 20%;
     margin: 2% auto;
     border-radius: 15px;
@@ -254,7 +259,9 @@ figure.snip1192 {
     width: 100%;
     color: #333;
     text-align: left;
-    box-shadow: none !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    /* box-shadow: none !important; */
   }
   figure.snip1192 * {
     -webkit-box-sizing: border-box;
@@ -275,13 +282,14 @@ figure.snip1192 {
     display: block;
     border-radius: 8px;
     position: relative;
-    background-color: #FFC300;
+    background-color: white;
     padding: 30px 50px 65px 50px;
     font-size: 0.8em;
     font-weight: 500;
     margin: 0 0 -50px;
     line-height: 1.6em;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    /* box-shadow: 5px 10px 5px 10px rgba(0, 0, 0, 0.15); */
   }
   figure.snip1192 blockquote:before,
   figure.snip1192 blockquote:after {
@@ -305,7 +313,7 @@ figure.snip1192 {
     margin: 0;
     text-transform: uppercase;
     text-align: center;
-    color: #ffffff;
+    color: #072A52;
   }
   figure.snip1192 .author h5 {
     opacity: 0.8;
@@ -313,8 +321,9 @@ figure.snip1192 {
     font-weight: 800;
   }
   figure.snip1192 .author h5 span {
-    font-weight: 400;
-    text-transform: none;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: capitalize;
     display: block;
   }
   
@@ -362,9 +371,91 @@ figure.snip1192 {
 .Collaboration_column2 .Collaboration_images .images img{
     width : 100%
 }
-
+/* Position Holders */
+.Position_heading{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    /* border: 1px solid red; */
+}
+.Position_heading h6{
+    color: #072A52;
+    font-weight: 900;
+    font-size: 32px;
+}
+.Position_heading hr{
+    border: 5px solid #072A52;
+    width: 20%;
+    margin: 2% auto;
+    border-radius: 15px;
+}
+.Position_column .Position_heading{
+    /* border: 1px solid brown; */
+    /* min-height: 60vh; */
+    padding-top: 20%;
+}
+.PositionHolder_Images_Column{
+    /* border: 1px solid red; */
+    /* width: 100%; */
+    /* minheight: 60vh; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    /* min-width: 50%; */
+    min-height: 60vh;
+    background-image: url(../Assets//Companybg.svg);
+    background-size: cover;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.containerStudent {
+    margin: 1%;
+    position: relative;
+    width: 25%;
+    border-radius: 15px;
+}
+  
+.containerStudent .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+.containerStudent .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .containerStudent:hover .image {
+    opacity: 0.3;
+  }
+  
+  .containerStudent:hover .middle {
+    opacity: 1;
+  }
+  
+  .containerStudent .text {
+    /* background-color: #072A52; */
+    color: #072A52;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 11px;
+    /* width: 100%;
+    z-index: 1000; */
+  }
 /* GetInTouch */
-
 .footerNav{
     /* background-color: #072A52; */
     border-top: 5px solid #FFC300;
@@ -538,7 +629,24 @@ figure.snip1192 {
     /* border : none */
 }
 
+.RateusModal{
+    background-image: url(../Assets/Companybg.svg);
+    background-size: cover;
+}
+.RateusHeader h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: #072A52;
+}
+.RateusHeader h1 span{
+    color: #FFC300;
+}
 
+.RateusModal .submit{
+    background-color: #072A52;
+    border: 1px solid #072A52;
+    border-radius: 15px;
+}
 
 @media screen and (max-width: 900px){
     .footerNav #brand{

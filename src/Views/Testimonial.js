@@ -9,24 +9,24 @@ function Testimonial() {
         "My behaviour is addictive functioning in a disease process of toxic co-dependency. I need holistic healing and wellness before I'll accept any responsibility for my actions.",
       image:
         "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample29.jpg",
-      name: "Mr. Aitzaz",
-      companyName: "Founder Edudoor",
+      name: "Mr. Ehsan",
+      companyName: "Research Associate(FAST)",
     },
     {
       quote:
         "My behaviour is addictive functioning in a disease process of toxic co-dependency. I need holistic healing and wellness before I'll accept any responsibility for my actions.",
       image:
         "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample29.jpg",
-      name: "Mr. Aitzaz",
-      companyName: "Founder Edudoor",
+      name: "Mr. Ahsan",
+      companyName: "Lecturer Karachi University",
     },
     {
       quote:
         "My behaviour is addictive functioning in a disease process of toxic co-dependency. I need holistic healing and wellness before I'll accept any responsibility for my actions.",
       image:
         "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample29.jpg",
-      name: "Mr. Aitzaz",
-      companyName: "Founder Edudoor",
+      name: "Mr. Zeeshan",
+      companyName: "Manager Saylani Mass IT",
     },
   ];
   return (
