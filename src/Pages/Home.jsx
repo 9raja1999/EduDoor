@@ -7,6 +7,7 @@ import Tution from "../Views/Tution";
 import VideoLectures from "../Views/VideoLectures";
 import Testimonial from "../Views/Testimonial";
 import Collaboration from "../Views/Collaboration";
+import DonateNow from "../Views/DonateNow";
 import GetInTouch from "../Views/GetInTouch";
 import Footer from "../Views/Footer";
 import PositionHolders from "../Views/PositionHolders";
@@ -41,6 +42,7 @@ function Home() {
       <Testimonial />
       <Collaboration />
       <PositionHolders />
+      <DonateNow />
       <GetInTouch />
       <Footer />
     </div>

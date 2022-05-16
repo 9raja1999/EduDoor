@@ -6,6 +6,7 @@ import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import Company from './Pages/Company';
 import Contact from './Pages/Contact';
+import Agreement from './Pages/Agreement';
 // protected routes
 import Dashboard from './Pages/Dashboard';
 import TutionRequest from './Pages/TutionRequest';
@@ -29,6 +30,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/Company' element={<Company />} />
             <Route path='/Contact' element={<Contact />} />
+            <Route path='/Agreement' element={<Agreement />} />
             <Route 
                   path='/Dashboard'
                   element={

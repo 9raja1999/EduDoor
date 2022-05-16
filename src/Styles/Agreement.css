@@ -1,0 +1,41 @@
+/* .userAgreement_container .ParagraphColumn{
+    background-image: url(../Assets//Companybg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+.cross{
+    
+    color: #072A52;
+    /* background-color: #072A52; */
+    font-size: 42px;
+}
+.userAgreement_container .imageRow{
+    /* border: 1px solid red; */
+    /* height: 50vh; */
+    min-height: 60vh;
+}
+.userAgreement_container .ParagraphColumn p{
+    text-align: justify;
+    font-weight: 700;
+}
+.userAgreement_container .ParagraphColumn h4{
+    font-weight: 900;
+    font-size: 32px;
+    color: #072A52
+}
+.userAgreement_container .ParagraphColumn h4 span{
+    color: #FFC300;
+}
+.userAgreement_container .ParagraphColumn p span{
+    color: #FFC300;
+}
+.NextButton{
+    background-color: #072A52;
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    width: 100%;
+}
+.NextButton:hover{
+    background-color: #072A52;
+}

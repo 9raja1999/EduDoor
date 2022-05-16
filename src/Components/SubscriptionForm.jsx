@@ -56,6 +56,7 @@ function SubscriptionForm(){
                         <li><h6>EduDoor</h6></li>
                         <Link to="/" style={listStyle}><li>Home</li></Link>
                         <Link to="/Company" style={listStyle}><li>About</li></Link>
+                        <Link to="/Agreement" style={listStyle}><li>Collaborate with us</li></Link>
                         <Link to="/Contact" style={listStyle}><li>Contact</li></Link>
                         <Link to="/signup" style={listStyle}><li>Create an Account</li></Link>
                         <Link to="/login" style={listStyle}><li>Login</li></Link>

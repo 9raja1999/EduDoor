@@ -41,20 +41,42 @@ function PositionHolders() {
       board: "Agha Khan",
       position: "1st Position",
     },
+    {
+      image: student1,
+      name: "Ayesha",
+      board: "Agha Khan",
+      position: "1st Position",
+    },
+    {
+      image: student1,
+      name: "Ayesha",
+      board: "Agha Khan",
+      position: "1st Position",
+    },
+    {
+      image: student1,
+      name: "Ayesha",
+      board: "Agha Khan",
+      position: "1st Position",
+    },
+    {
+      image: student1,
+      name: "Ayesha",
+      board: "Agha Khan",
+      position: "1st Position",
+    },
   ]);
-  const PositionHolderContainer = {
-    margin: "0 0 5% 0",
-  };
+
   return (
-    <Container fluid style={PositionHolderContainer}>
+    <Container fluid className='PositionHolderContainer mt-5 mb-5'>
       <Row>
-        <Col md={5} xs={12} className="Position_column">
+        <Col md={12} xs={12} className="Position_column">
           <div className="Position_heading">
             <h6>Our Position Holders</h6>
             <hr />
           </div>
         </Col>
-        <Col md={5} xs={12} className="PositionHolder_Images_Column">
+        <Col md={6} xs={12} className="PositionHolder_Images_Column">
           {students.map((obj, idx) => {
             return (
               <div class="containerStudent">
