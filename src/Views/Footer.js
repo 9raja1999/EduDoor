@@ -8,7 +8,7 @@ const Footer = () => {
               <Row>
                   <Col md={12} xs={12}>
                     <hr />
-                    <div className="copyright"> Copyright 2022 | All Rights Reserved by Edudoor Pvt. Ltd.</div>
+                    <div className="copyright"> Copyright 2022 | All Rights Reserved by ParhaiCastle Pvt. Ltd.</div>
                   </Col>
               </Row>
           </Container>

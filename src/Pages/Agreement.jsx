@@ -1,32 +1,59 @@
 import React from "react";
 import { Container, Row, Col, Navbar, Form, Button, Modal } from "react-bootstrap";
 import { Link } from 'react-router-dom';
+import CollaborationDataDervice from '../Services/CollaborationDB';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import colaborationImage from "../Assets/Collaboration/collaboration.jpg";
 import "../Styles/Agreement.css";
+import { async } from "@firebase/util";
 
 function Agreement() {
     const [show, setShow] = React.useState(false);
-    const [companyName, setCompanyName] = React.useState('');
-    const [email, setEmail] = React.useState('');
-    const [address1, setAddress1] = React.useState('')
-    const [address2, setAddress2] = React.useState('')
-    const [city, setCity] = React.useState('')
-    const [state, setState] = React.useState('')
-    const [zip, setZip] = React.useState('')
-    console.log(state);
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        if(companyName==='' || email === '' || address1 === '' || city === '' || state === '' || zip === ''){
-            // alert('All fieds are required') 
-            Swal.fire({type:'error',text:'All fields are mandatory'});
+    const [partner, setPartner]= React.useState('');
+    const [companyName, setCompanyName] = React.useState();
+    const [email, setEmail] = React.useState();
+    const [address1, setAddress1] = React.useState()
+    const [address2, setAddress2] = React.useState()
+    const [city, setCity] = React.useState()
+    const [state, setState] = React.useState()
+    const [zip, setZip] = React.useState()
+    // console.log(state);
+    const Proceed = () => {
+        if(partner == ''){
+            setShow(false)
         }else{
-            Swal.fire({type:'success',text:'Thanks! we will consider your response and let you know soon'});
+            setShow(true)
         }
-        // close modal
-        setShow(false)
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        if(companyName==='' || email === '' || address1 === '' || city === '' || state === '' || zip === ''){ 
+            Swal.fire({type:'error',text:'All fields are mandatory'});
+            return;
+        }
+        // else{
+        //     Swal.fire({type:'success',text:'Thanks! we will consider your response and let you know soon'});
+        // }
+        const newCollaboration = {
+            partner,
+            companyName,
+            email,
+            address1,
+            address2,
+            city,
+            state,
+            zip
+        }
+        try{
+            await CollaborationDataDervice.addCollaborationRequest(newCollaboration);
+            Swal.fire({type:'success',text:'Thanks! we will consider your response and let you know soon'});
+        }catch(err){
+            Swal.fire({type:'success',text:err.message});
+        }
+
+
         // All fields empty
         setCompanyName('')
         setEmail('')
@@ -36,7 +63,7 @@ function Agreement() {
         setState('')
         setZip('')
     }
-
+    console.log(partner);
     return (
         <Container fluid className="userAgreement_container">
             <Modal
@@ -195,25 +222,31 @@ function Agreement() {
                                     name="group1"
                                     type={type}
                                     id={`inline-${type}-1`}
-                                />
+                                    value = 'organization'
+                                    onChange={(e)=>setPartner(e.target.value)}
+                                    />
                                 <Form.Check
                                     inline
                                     label="NGO"
                                     name="group1"
                                     type={type}
                                     id={`inline-${type}-2`}
-                                />
+                                    value = 'ngo'
+                                    onChange={(e)=>setPartner(e.target.value)}
+                                    />
                                 <Form.Check
                                     inline
                                     label="Teacher"
                                     name="group1"
                                     type={type}
                                     id={`inline-${type}-3`}
+                                    value = 'teacher'
+                                    onChange={(e)=>setPartner(e.target.value)}
                                 />
                             </div>
                         ))}
                     </Form>
-                    <Button className="NextButton" onClick={() => setShow(true)}>Next</Button>
+                    <Button className="NextButton" onClick={() => Proceed()}>Next</Button>
                 </Col>
             </Row>
         </Container>

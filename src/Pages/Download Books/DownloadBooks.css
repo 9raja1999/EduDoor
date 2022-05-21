@@ -1,0 +1,86 @@
+.downloadBooksHead{
+    /* border : 1px solid red; */
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.downloadBooksHead h1{
+    font-weight: 900;
+    text-align: center;
+    font-size: 32px;
+    color: #072A52;
+}
+.downloadBooksHead h1 span{
+    color : #ffc300
+}
+.displayBooks{
+    /* border : 1px solid red; */
+    width: 100%;
+    /* height: 100vh; */
+    min-height: 100vh;
+    background-image: url(../../Assets/playing_bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    overflow-y: auto;
+    overflow-x: auto;
+    scrollbar-color:  #999 #f1f1f1;
+}
+.displayBooks .bookCard{
+    /* border : 1px solid red; */
+    width: 300px;
+    height: 40%;
+    /* min-height: 40vh; */
+    margin : 10px;
+    text-align: center;
+    color: #072A52;
+    position: relative;
+    background-color: #cec6ab55;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;}
+.bookCard h6{
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.displayBooks .bookCard img{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    opacity : 0.8
+}
+.bookCard .download{
+    position: absolute;
+    top : 2%;
+    right : 2%;
+    background-color: #ffc300;
+    border: none;
+    font-weight: 900;
+}
+.bookCard .download:hover{
+    color: #072A52
+}
+
+
+::-webkit-scrollbar {
+    transition-duration: 0.3s;
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:hsla(100,0%,0%,0.2); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

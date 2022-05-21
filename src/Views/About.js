@@ -31,7 +31,7 @@ function About() {
     <Container className='About_container' fluid>
     <Row>
         <div className='Aboutsection_heading'>
-            <h6>Why Edudoor Works</h6>
+            <h6>Why ParhaiCastle Works</h6>
             <p>Student-centered. Teacher-driven.</p>
         </div>
     </Row>

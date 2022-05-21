@@ -9,9 +9,9 @@ import Contact from './Pages/Contact';
 import Agreement from './Pages/Agreement';
 // protected routes
 import Dashboard from './Pages/Dashboard';
-import TutionRequest from './Pages/TutionRequest';
-import DownloadBooks from './Pages/DownloadBooks';
-import Lectures from './Pages/Lectures';
+import TutionRequest from './Pages/Request tutions/TutionRequest';
+import DownloadBooks from './Pages/Download Books/DownloadBooks';
+import Lectures from './Pages/Youtube videos/Lectures';
 // importing Protected Routes
 import ProtectedRoute from './Routes/ProtectedRoute';
 

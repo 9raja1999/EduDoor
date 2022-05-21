@@ -1,0 +1,21 @@
+.DragContainer{
+    /* border: 1px solid red; */
+    width: 40%;
+    margin: 0 auto;
+    /* height: 20vh; */
+    background-color: rgba(187, 197, 193, 0.611);
+    padding: 2%;
+    border-radius: 15px;
+}
+.RequestBtn{
+    /* border: 1px solid red; */
+    width: 40%;
+    margin: 0 auto;
+    /* padding-bottom: 5%; */
+}
+.RequestBtn .Rbtn{
+    width: 100%;
+    border-radius: 15px;
+    background-color: #072A52;
+    font-weight: 900;
+}

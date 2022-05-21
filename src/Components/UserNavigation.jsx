@@ -4,7 +4,8 @@ import { Container, Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 
 function UserNavigation(props) {
   const { user, logOut } = useUserAuth();
-  console.log(user);
+  // console.log(user);
+  // localStorage.setItem('items', JSON.stringify(user));
   const handleLogOut = async () => {
     try {
       await logOut();
@@ -16,7 +17,7 @@ function UserNavigation(props) {
     <>
       <Navbar className="userNavigation" collapseOnSelect expand="lg" sticky="top">
         <Container fluid>
-          <Navbar.Brand id='myBrand'>EDUDOOR</Navbar.Brand>
+          <Navbar.Brand id='myBrand'>PARHAI CASTLE</Navbar.Brand>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
             style={{ backgroundColor: "#146eb3", color: "white" }}

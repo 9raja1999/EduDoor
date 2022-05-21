@@ -15,6 +15,15 @@ class contactDataService {
     addContact = (newContact) => {
         return addDoc(contactCollectionRef, newContact);
     }
+
+    getAllContact = () => {
+      return getDocs(contactCollectionRef);
+    }
+
+    getContact = (id) => {
+      const contactDoc = doc(db,'contact',id);
+      return getDocs(contactDoc);
+    }
 }
 
 

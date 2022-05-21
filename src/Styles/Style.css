@@ -5,7 +5,7 @@
 #brand{
     color: #072A52;
     font-weight: 900;
-    letter-spacing: 9px;
+    /* letter-spacing: 9px; */
     font-size: 36px;
 }
 #collasible-nav-dropdown{
@@ -79,27 +79,32 @@
 /* Slider */
 #Carosel{
     position: relative;
+    min-height: 80vh;
 }
 #Caption{
     position: absolute;
-    bottom: 25%
+    top: 25%
 }
 #Caption h3{
     /* color: #146eb3; */
     color: white;
     font-weight: 900;
+    font-size: 48px;
 }
 #Caption p{
     color: white;
-    font-weight: 100;
+    font-weight: 700;
+    font-size: 23px;
 }
 #watchVideo_btn{
     /* border: 1px solid #146eb3;
     color: #146eb3; */
-    border: 1px solid white;
+    border-radius: 15px;
+    border: 5px solid white;
     color: white;
     font-size: 100%;
 }
+
 #watchVideo_btn:hover{
     background-color: white;
     color: #146eb3;
@@ -482,23 +487,13 @@ figure.snip1192 {
 /* Donate */
 .DonateContainer{
     margin-top: 10%;
-    /* margin-bottom: 10%; */
+    margin-bottom: 10%;
     min-height: 40vh;
 }
 .DonateContainer .DonateColumn1{
     margin: 0 auto;
 }
 .DonateContainer .DonateColumn1 .Donate_btn{
-    width: 100%;
-    background-color: #072A52;
-    font-weight: 900;
-    letter-spacing: 1px;
-    font-size: 26px;
-    border-radius: 15px;
-    border: none;
-    margin-bottom: 5%;
-}
-.DonateContainer .DonateColumn1 .crossbutton{
     width: 100%;
     background-color: #072A52;
     font-weight: 900;
@@ -521,7 +516,7 @@ figure.snip1192 {
 .footerNav #brand{
     color: white;
     font-weight: 900;
-    letter-spacing: 9px;
+    /* letter-spacing: 9px; */
     font-size: 36px;
     text-transform: uppercase;
 }
@@ -728,7 +723,7 @@ figure.snip1192 {
 
 @media screen and (max-width: 591px) {
     #brand{
-        font-size: 28px;
+        font-size: 26px;
     }
     #CreateAcc_btn{
         border: 1px solid #01aa95;

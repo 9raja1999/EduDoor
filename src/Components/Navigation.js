@@ -17,7 +17,7 @@ function Navigation() {
     <Navbar className="navigation" collapseOnSelect expand="lg" sticky="top">
       <Container>
         <Link to="/" style={{ textDecoration: "none" }}>
-          <Navbar.Brand id="brand">EDUDOOR</Navbar.Brand>
+          <Navbar.Brand id="brand">PARHAI CASTLE</Navbar.Brand>
         </Link>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"

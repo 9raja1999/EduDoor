@@ -10,7 +10,7 @@
 .userNavigation #myBrand{
     color: #072A52;
     font-weight: 900;
-    letter-spacing: 9px;
+    /* letter-spacing: 9px; */
     font-size: 36px;
 }
 .userNavigation #logout_btn{

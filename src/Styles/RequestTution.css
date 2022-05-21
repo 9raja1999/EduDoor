@@ -3,9 +3,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.RequestTutionContainer .requestTution_Form{
-    border : 1px solid red;
-}
 .RequestTutionContainer h1{
     margin: 0 auto;
 }

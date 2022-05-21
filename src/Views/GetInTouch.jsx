@@ -12,7 +12,7 @@ function GetInTouch() {
         <Col xs={12} md={12} lg={6}>
             <Navbar className="mt-3">
               <Container>
-                <Navbar.Brand id="brand">Edudoor</Navbar.Brand>
+                <Navbar.Brand id="brand">PARHAICASTLE</Navbar.Brand>
               </Container>
             </Navbar>
         </Col>
