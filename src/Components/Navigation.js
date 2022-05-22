@@ -33,8 +33,13 @@ function Navigation() {
                 Create an Account
               </Button>
             </Link>
+            <Link to="/login">
+              <Button variant="custom" id="CreateAcc_btn">
+                Login
+              </Button>
+            </Link>
 
-            <NavDropdown title="Login" id="collasible-nav-dropdown">
+            {/* <NavDropdown title="Login" id="collasible-nav-dropdown">
               <NavDropdown.Item id="nav-subdropdown">
                 <Link
                   to="/login"
@@ -43,7 +48,7 @@ function Navigation() {
                   Student
                 </Link>
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

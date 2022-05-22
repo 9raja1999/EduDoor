@@ -13,15 +13,14 @@ import "../Styles/Style.css";
 
 
 const crossBtnStyle = {
-  width: '10%',
-  borderRadius: '15px',
-  fontSize: '26px',
+  width: '100%',
   backgroundColor: '#072A52',
   fontWeight: '900',
+  letterSpacing: '1px',
+  fontSize: '26px',
+  borderRadius: '15px',
   border: 'none',
-  margin: '5%',
-  float: 'right'
-
+  marginBottom: '5%'
 }
 
 function DonateNow() {
