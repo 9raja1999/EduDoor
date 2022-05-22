@@ -1,22 +1,23 @@
 {
   "files": {
     "main.css": "/EduDoor/static/css/main.f131d8e9.css",
-    "main.js": "/EduDoor/static/js/main.4055b6a7.js",
-    "static/media/slide2.jpg": "/EduDoor/static/media/slide2.eaf7ffe3ed373d9ea7ba.jpg",
-    "static/media/slide1.jpg": "/EduDoor/static/media/slide1.1f12adfcf7f922573bb8.jpg",
+    "main.js": "/EduDoor/static/js/main.97db5745.js",
+    "static/media/1.png": "/EduDoor/static/media/1.0ef750eea8c6d3e20fb2.png",
     "static/media/schools.png": "/EduDoor/static/media/schools.8827a5efb45e1db5cf36.png",
     "static/media/bookCover.jpg": "/EduDoor/static/media/bookCover.baa1483c94246ccf80cb.jpg",
+    "static/media/3.jpg": "/EduDoor/static/media/3.34b3bb822e161b65e0e9.jpg",
     "static/media/ebook.png": "/EduDoor/static/media/ebook.64111fe89cb779313b63.png",
+    "static/media/2.jpg": "/EduDoor/static/media/2.e0b4956a8ea45197558d.jpg",
     "static/media/collaboration.jpg": "/EduDoor/static/media/collaboration.91249560bf78cefeb37f.jpg",
     "static/media/playing_bg.svg": "/EduDoor/static/media/playing_bg.101e0e6a8f5f587c4e20.svg",
     "static/media/student1.jpg": "/EduDoor/static/media/student1.629b6f35b7738c70d1f7.jpg",
     "static/media/Companybg.svg": "/EduDoor/static/media/Companybg.0417c875b67c4f7ebb02.svg",
     "index.html": "/EduDoor/index.html",
     "main.f131d8e9.css.map": "/EduDoor/static/css/main.f131d8e9.css.map",
-    "main.4055b6a7.js.map": "/EduDoor/static/js/main.4055b6a7.js.map"
+    "main.97db5745.js.map": "/EduDoor/static/js/main.97db5745.js.map"
   },
   "entrypoints": [
     "static/css/main.f131d8e9.css",
-    "static/js/main.4055b6a7.js"
+    "static/js/main.97db5745.js"
   ]
 }
