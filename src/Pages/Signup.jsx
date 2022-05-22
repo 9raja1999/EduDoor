@@ -81,7 +81,7 @@ function Signup() {
                   ><i className={showConfirm==true?"fa fa-eye":"fa fa-eye-slash"}></i></InputGroup.Text>
                 </InputGroup>
                 <Button className="w-100 createAcc_btn" type="submit">
-                  Create Account
+                  Register
                 </Button>
               </Form>
             </Card.Body>

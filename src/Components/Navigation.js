@@ -30,7 +30,7 @@ function Navigation() {
           <Nav>
             <Link to="/Signup">
               <Button variant="custom" id="CreateAcc_btn">
-                Create an Account
+                Registration
               </Button>
             </Link>
             <Link to="/login">
