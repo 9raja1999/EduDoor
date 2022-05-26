@@ -19,7 +19,7 @@ function DownloadBooks() {
 
     const getBooks = async () => {
         const data = await booksDataService.getAllBooks();
-        // console.log(data.docs);
+        console.log(data.docs);
         setBooks(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     }
 
@@ -31,7 +31,7 @@ function DownloadBooks() {
         }
     }
 
-    console.log(search)
+    // console.log(books)
     return (
         <>
             <Container fluid style={{ minHeight: '100vh' }}>

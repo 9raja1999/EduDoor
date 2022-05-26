@@ -50,7 +50,7 @@ function Agreement() {
             await CollaborationDataDervice.addCollaborationRequest(newCollaboration);
             Swal.fire({type:'success',text:'Thanks! we will consider your response and let you know soon'});
         }catch(err){
-            Swal.fire({type:'success',text:err.message});
+            Swal.fire({type:'error',text:err.message});
         }
 
 

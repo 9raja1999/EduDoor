@@ -7,18 +7,64 @@ import HTML5toTouch  from "react-dnd-multi-backend/dist/esm/HTML5toTouch";
 import DragContainer from './DragContainer';
 import UserNavigation from "../../Components/UserNavigation";
 import Footer from '../../Views/Footer';
+import RequestDataService from '../../Services/RequestDB';
+import Swal from 'sweetalert2'
 import "../../Styles/RequestTution.css";
 
 function TutionRequest() {
     const {user} = useUserAuth();
+    const [fName, setFName] = useState('');
+    const [lName, setLName] = useState('');
+    const [guardian, setGuardian] = useState('');
+    const [birth, setBirth] = useState('');
+    const [gender, setGender] = useState('');
+    const [institute, setInstitute] = useState('');
+    const [grade, setGrade] = useState('');
+
     const [priorities , setPriorities] = useState([]);
-    const [currentUser, setCurrentUser] = useState(user.email)
+    const [currentUser, setCurrentUser] = useState(user.email);
+    
     
     const getData = (val) =>{
         setPriorities(val)
     }
-    console.log(priorities)
-    // console.log(currentUser);
+    // console.log(priorities)
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if(fName === '' || lName === '' || gender === '' || guardian === '' || institute === '' || birth === '' || grade === ''){
+            Swal.fire({type:'error',text:'All fields are mandatory'});
+            return
+        }
+        
+        const newRequest = {
+            fName,
+            lName,
+            birth,
+            currentUser,
+            gender,
+            grade,
+            guardian,
+            institute,
+            priorities,
+        }
+
+        try{
+            await RequestDataService.addRequest(newRequest);
+            Swal.fire({type:'success',text:'Thanks! we will consider your response and let you know soon'});
+        }catch(err){
+            Swal.fire({type:'error',text:err.message});
+        }
+        
+        setFName('');
+        setLName('');
+        setGuardian('');
+        setBirth('');
+        setGender('');
+        setInstitute('');
+        setGrade('');
+    }
+    // console.log(lName);
     return (
         <DndProvider backend={MultiBackend} options={HTML5toTouch}>
             <Container
@@ -46,13 +92,21 @@ function TutionRequest() {
                                     <Form.Label>
                                         First Name <span>*</span>
                                     </Form.Label>
-                                    <Form.Control type="text" placeholder="First name" />
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="First name"
+                                        onChange = {(e)=>setFName(e.target.value)}
+                                    />
                                 </div>
                                 <div style={{ width: "40%" }}>
                                     <Form.Label>
                                         Last Name <span>*</span>
                                     </Form.Label>
-                                    <Form.Control type="text" placeholder="Last name" />
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="Last name"
+                                        onChange = {(e)=>setLName(e.target.value)}
+                                    />
                                 </div>
                             </Form.Group>
                             <Form.Group
@@ -63,13 +117,21 @@ function TutionRequest() {
                                     <Form.Label>
                                         Guardian Name <span>*</span>
                                     </Form.Label>
-                                    <Form.Control type="text" placeholder="Guardian name" />
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="Guardian name"
+                                        onChange = {(e)=>setGuardian(e.target.value)}
+                                    />
                                 </div>
                                 <div style={{ width: "40%" }}>
                                     <Form.Label>
                                         Email
                                     </Form.Label>
-                                    <Form.Control type="text" value={currentUser} readonly/>
+                                    <Form.Control
+                                        type="text"
+                                        value={currentUser}
+                                        readonly
+                                    />
                                 </div>
                             </Form.Group>
                             <Form.Group
@@ -80,15 +142,32 @@ function TutionRequest() {
                                     <Form.Label>
                                         Date of birth <span>*</span>
                                     </Form.Label>
-                                    <Form.Control type="date" />
+                                    <Form.Control
+                                        type="date"
+                                        onChange = {(e)=>setBirth(e.target.value)}
+                                    />
                                 </div>
                                 <div style={{ width: "40%" }}>
                                     <Form.Label>
                                         Gender <span>*</span>
                                     </Form.Label>
                                     <div>
-                                        <Form.Check inline label="Male" name="male" type="radio" />
-                                        <Form.Check inline label="Male" name="male" type="radio" />
+                                        <Form.Check
+                                            inline
+                                            label="Male"
+                                            name="male"
+                                            type="radio"
+                                            value = 'male'
+                                            onChange = {(e)=>setGender(e.target.value)}
+                                        />
+                                        <Form.Check
+                                            inline
+                                            label="Female"
+                                            name="male"
+                                            type="radio"
+                                            value = 'female'
+                                            onChange = {(e)=>setGender(e.target.value)}
+                                        />
                                     </div>
                                 </div>
                             </Form.Group>
@@ -100,7 +179,10 @@ function TutionRequest() {
                                     <Form.Label>
                                         Institute Name(school)<span>*</span>
                                     </Form.Label>
-                                    <Form.Control type="text" />
+                                    <Form.Control
+                                        type="text"
+                                        onChange = {(e)=>setInstitute(e.target.value)}
+                                    />
                                 </div>
                                 <div style={{ width: "40%" }}>
                                     <Form.Label>
@@ -109,21 +191,19 @@ function TutionRequest() {
                                     <div>
                                         <Form.Check
                                             inline
-                                            label="Grade 7"
-                                            name="Grade 7"
+                                            label="Grade 6"
+                                            name="grade6"
                                             type="radio"
+                                            value = 'grade6'
+                                            onChange = {(e)=>setGrade(e.target.value)}
                                         />
                                         <Form.Check
                                             inline
-                                            label="Grade 8"
-                                            name="Grade 8"
+                                            label="Other"
+                                            name="other"
                                             type="radio"
-                                        />
-                                        <Form.Check
-                                            inline
-                                            label="Grade 9"
-                                            name="Grade 8"
-                                            type="radio"
+                                            value = 'other'
+                                            onChange = {(e)=>setGrade(e.target.value)}
                                         />
                                     </div>
                                 </div>
@@ -139,7 +219,7 @@ function TutionRequest() {
                 <Row className="mt-5 mb-5">
                     <Col md={12} xs={12} lg={12}>
                         <div className="RequestBtn">
-                            <Button className="Rbtn">Request</Button>
+                            <Button className="Rbtn" onClick={handleSubmit}>Request</Button>
                         </div>
                     </Col>
                 </Row>
