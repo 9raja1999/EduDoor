@@ -13,6 +13,13 @@
 .downloadBooksHead h1 span{
     color : #ffc300
 }
+.downloadBooksHead .search-btn{
+    background-color: #072A52;
+    width : 50%;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
 .displayBooks{
     /* border : 1px solid red; */
     width: 100%;
@@ -59,6 +66,7 @@
     background-color: #ffc300;
     border: none;
     font-weight: 900;
+    border-top-right-radius: 15px;
 }
 .bookCard .download:hover{
     color: #072A52

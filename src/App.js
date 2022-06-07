@@ -23,7 +23,8 @@ import './App.css';
 function App() {
   return (
     <UserAuthContextProvider>
-      <Router basename='/EduDoor'>
+      {/* <Router basename='/EduDoor'> */}
+      <Router>
           <Routes>
             <Route exact path="" element={<Home />} />
             <Route path='/signup' element={<Signup />} />

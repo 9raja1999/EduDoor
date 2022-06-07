@@ -28,7 +28,7 @@ function Rateus({ show, setShow }) {
       setWarning({ ...warning, visibility: "" });
     }
   };
-  console.log(rating);
+  // console.log(rating);
   return (
     <>
       {/* <SweetAlert
