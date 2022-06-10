@@ -12,7 +12,7 @@ function Rateus({ show, setShow }) {
     visibility: "hidden",
     color: "red",
   });
-//   const [alert, setAlert] = React.useState(false);
+  //   const [alert, setAlert] = React.useState(false);
 
   const [rating, setRating] = React.useState(0);
   const MySwal = withReactContent(Swal)

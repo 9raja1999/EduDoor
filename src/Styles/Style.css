@@ -31,9 +31,10 @@
     font-weight: 500;
 }
 #CreateAcc_btn{
-    border: 1px solid #01aa95;
-    color: #01AA95;
-    background: linear-gradient(to right, #01aa95 50% , white 50%);
+    border: 1px solid #072A52;
+    color: #072A52;
+    font-weight: 600;
+    background: linear-gradient(to right, #072A52 50% , white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all .5s ease-out;
@@ -83,7 +84,10 @@
 }
 #Caption{
     position: absolute;
-    top: 25%
+    top: 25%;
+    background-color: #072a526f;
+    border-radius: 15px;
+    /* height: 200px; */
 }
 #Caption h3{
     /* color: #146eb3; */
@@ -100,18 +104,24 @@
     /* border: 1px solid #146eb3;
     color: #146eb3; */
     border-radius: 15px;
-    border: 5px solid white;
+    /* border: 5px solid white; */
+    background-color: #072A52;
     color: white;
     font-size: 100%;
+    margin : 1px;
+}
+#watchVideo_btn:hover{
+    background-color: #0b3b73;
+    color : #FFC300;
 }
 
-#watchVideo_btn:hover{
+/* #watchVideo_btn:hover{
     background-color: white;
     color: #146eb3;
     font-weight: bold;
     font-size: 100%;
     text-transform: uppercase;
-} 
+}  */
 /* About */
 .About_container{
     background-color: #f4f4f4;

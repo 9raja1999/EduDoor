@@ -183,7 +183,7 @@ function Agreement() {
                     <Navbar>
                         <Container>
                             <Link to="/" style={{ textDecoration: "none" }}>
-                                <Navbar.Brand id="brand">EDUDOOR</Navbar.Brand>
+                                <Navbar.Brand id="brand">PARHAICASTLE</Navbar.Brand>
                             </Link>
                             <Navbar.Toggle />
                             <Navbar.Collapse className="justify-content-end">

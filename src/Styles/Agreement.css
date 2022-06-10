@@ -9,6 +9,9 @@
     /* background-color: #072A52; */
     font-size: 42px;
 }
+.cross:hover{
+    color : #FFC300;
+}
 .userAgreement_container .imageRow{
     /* border: 1px solid red; */
     /* height: 50vh; */
@@ -37,5 +40,7 @@
     width: 100%;
 }
 .NextButton:hover{
-    background-color: #072A52;
+    background-color: #FFC300;
+    color : #072A52;
+    font-weight: 600;
 }

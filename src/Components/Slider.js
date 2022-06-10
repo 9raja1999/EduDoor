@@ -16,7 +16,8 @@ function Slider() {
                 <p>
                     Deliver differentiated practice aligned to ELA and math standards
                 </p>
-                <Button variant='custom' id='watchVideo_btn'><i className="fa fa-play"></i> Meet Edudoor</Button>
+                <Button variant='custom' id='watchVideo_btn'><i className="fa fa-play"></i> Impact Assessment</Button>
+                <Button variant='custom' id='watchVideo_btn'><i className="fa fa-play"></i> Student Reflections</Button>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -26,7 +27,8 @@ function Slider() {
                 <p>
                     Deliver differentiated practice aligned to ELA and math standards
                 </p>
-                <Button variant='custom' id='watchVideo_btn'><i className="fa fa-play"></i> Meet Edudoor</Button>
+                <Button variant='custom' id='watchVideo_btn'><i className="fa fa-play"></i> Impact Assessment</Button>
+                <Button variant='custom' id='watchVideo_btn'><i className="fa fa-play"></i> Student Reflections</Button>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -36,7 +38,8 @@ function Slider() {
                 <p>
                     Deliver differentiated practice aligned to ELA and math standards
                 </p>
-                <Button variant='custom' id='watchVideo_btn'><i className="fa fa-play"></i> Meet Edudoor</Button>
+                <Button variant='custom' id='watchVideo_btn'><i className="fa fa-play"></i> Impact Assessment</Button>
+                <Button variant='custom' id='watchVideo_btn'><i className="fa fa-play"></i> Student Reflections</Button>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
