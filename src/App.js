@@ -29,7 +29,7 @@ function App() {
   return (
     <UserAuthContextProvider>
       {/* <Router basename='/EduDoor'> */}
-      <Router>
+      <Router basename='/'>
           <Routes>
             <Route exact path="" element={<Home />} />
             <Route path='/admin' element={<Admin />} />
