@@ -1,59 +1,44 @@
-import React, { useState , useEffect} from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Navigation from "../Components/Navigation";
-import Footer from '../Views/Footer';
+import Navigation from "../../Components/Navigation";
+import Footer from '../../Views/Footer';
 import GoogleButton from "react-google-button";
-import Swal from 'sweetalert2'
 import { Form, Button, Card, Container, Alert, InputGroup } from "react-bootstrap";
-import UsersDB from "../Services/UsersDB";
+import { useUserAuth } from "../../Context/UserAuthContext";
 
 
-function Login() {
-  const [users, setUsers] = useState([]);
+function Admin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const [showPass, setShowPass] = useState(false);
-  const [error, setError] = useState('');
+
+  const [error, setError] = useState("");
   const navigate = useNavigate();
+  const { logIn , googleSignIn } = useUserAuth();
 
-  useEffect(()=>{
-    getUsers();
-  },[])
-
-  const getUsers = async() => {
-    const data = await UsersDB.getAllUsers();
-    setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-  }
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    let verify;
-    if(email == '' || password == ''){
-      alert('All fields are mandatory')
+    setError("");
+    try {
+      await logIn(email, password);
+      navigate("/AdminPanel");
+    } catch (err) {
+      setError(err.message);
     }
+  };
 
-    users.every(obj => {
-      if((obj.mailingAddress == email)&&(obj.password == password)&&(obj.status == true)){
-        window.localStorage.setItem('currUser', JSON.stringify({status : obj.status}));
-        alert('verified')   
-        return false
-      }
-      window.localStorage.setItem('currUser', JSON.stringify({status : false}));
-      return true
-    })
 
-    verify = JSON.parse(window.localStorage.getItem('currUser'))
-    if(verify.status == false){
-      Swal.fire({type : 'error' , text : "You don't have access try contacting the admin"})
-    }else if(verify.status == true){
-      navigate('/Dashboard')
-    }else if(email == '' && password == ''){
-      Swal.fire({type : 'error' , text : 'All fields are mandatory'})
+  const handleGoogleSignIn = async(e) => {
+    e.preventDefault();
+    try{
+      await googleSignIn();
+      navigate('/AdminPanel');
+    }catch(err){
+      setError(err.message)
     }
-    console.log(verify);    
   }
-  console.log(users);
-
+  
   return (
     // <AuthProvider>
     <>
@@ -66,7 +51,7 @@ function Login() {
           <Card className="loginDiv">
             <Card.Body>
               <h2 className="text-center mb-3">
-                LogIn As <span>Student</span>
+                LogIn As <span>Admin</span>
               </h2>
               {error && <Alert variant="danger">{error}</Alert>}
 
@@ -102,6 +87,9 @@ function Login() {
                   Login
                 </Button>
                 <hr />
+                <div className="d-grid gap-2">
+                  <GoogleButton onClick={handleGoogleSignIn} />
+                </div>
               </Form>
             </Card.Body>
           </Card>
@@ -116,4 +104,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Admin;

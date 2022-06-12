@@ -4,10 +4,11 @@ import Ebook from '../Assets/ebook.png';
 
 function VideoLectures(){
     const videoKeys = [
-        {description :'One device many books'},
+        {description :'One device many videos'},
+        {description :'Easy to understand'},
+        {description :'Short and Interesting'},
         {description :'Accessible Everywhere'},
-        {description :'Easy on the eyes'},
-        {description :'Affordable in the long run'}
+        {description :'Lecture topics on demand of students'}
     ] 
   return (
     <Container fluid style={{}}>

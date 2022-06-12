@@ -12,7 +12,6 @@ import Swal from 'sweetalert2'
 import "../../Styles/RequestTution.css";
 
 function TutionRequest() {
-    const {user} = useUserAuth();
     const [fName, setFName] = useState('');
     const [lName, setLName] = useState('');
     const [guardian, setGuardian] = useState('');
@@ -22,7 +21,7 @@ function TutionRequest() {
     const [grade, setGrade] = useState('');
 
     const [priorities , setPriorities] = useState([]);
-    const [currentUser, setCurrentUser] = useState(user.email);
+    const [currentUser, setCurrentUser] = useState('');
     
     
     const getData = (val) =>{
@@ -129,8 +128,8 @@ function TutionRequest() {
                                     </Form.Label>
                                     <Form.Control
                                         type="text"
-                                        value={currentUser}
-                                        readonly
+                                        placeholder="Email Address"
+                                        onChange = {(e)=>setCurrentUser(e.target.value)}
                                     />
                                 </div>
                             </Form.Group>

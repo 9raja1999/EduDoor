@@ -17,14 +17,14 @@ function About() {
       icon : 'fa fa-500px',
       heading: "Target Students who are less priviledge",
       description:
-        "Through this initiative, we tend to target students who are less privileged but have ambitions to get quality education. Initially, we would approach Government and Private Schools to ascertain the number of students who are studying  on Zakat and Donation and can hardly afford books and get enrolled themselves for any tutorials in order to accommodate them through this website",
+        "Through this initiative, we tend to target students who are less privileged but have a longing for quality education. These students, who can only make limited use of their hidden potential, will be able to expand on their ability to learn and think.  We approach Government and private schools to ascertain the number of students who are studying on Zakat and donations and can hardly afford books and teachers. The enrolled students will have free access to virtual learning on Parhaicastle which aims to instil concepts that are above the national standard.",
     },
     {
       class : 'card3',
       icon : 'fa fa-500px',
       heading: "Effective",
       description:
-        "Online education enables you to study or teach from anywhere in the world. This means there’s no need to commute from one place to another or follow a rigid schedule. The virtual classroom is also available anywhere there’s an internet connection",
+        "Online Education enables one to study or teach from anywhere in the world. There is no need to commute from one place to another or follow a rigid schedule. Only simple equipment such as a device and an internet connection is required. Students also have an option to collaborate and learn in groups or have one-one sessions with tutors to discuss a wide range of concepts including those which are beyond the scope of the syllabus.",
     },
   ];
   return(

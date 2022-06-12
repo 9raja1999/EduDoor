@@ -1,17 +1,16 @@
 import React from "react";
+import {useNavigate} from 'react-router-dom';
 import { useUserAuth } from "../Context/UserAuthContext";
 import { Container, Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 
 function UserNavigation(props) {
   const { user, logOut } = useUserAuth();
+  let navigate = useNavigate();
   // console.log(user);
   // localStorage.setItem('items', JSON.stringify(user));
-  const handleLogOut = async () => {
-    try {
-      await logOut();
-    } catch (err) {
-      console.log(err.message);
-    }
+  const handleLogOut = () => {
+    window.localStorage.setItem('currUser',JSON.stringify({status : false}))
+    navigate('/');
   };
   return (
     <>
@@ -28,7 +27,7 @@ function UserNavigation(props) {
           >
             <Nav>
               <Button variant="custom" id="welcomeMsg">
-                Welcome! <span>{user && user.email}</span>
+                Welcome! <span>on board</span>
               </Button>
               <Button variant="custom" id="logout_btn" onClick={handleLogOut}>
                 Logout <i className="fa fa-user"></i>

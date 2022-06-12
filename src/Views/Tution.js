@@ -7,10 +7,11 @@ import "../Styles/Style.css";
 
 function Tution() {
   const tutionKeys = [
-    { description: "One device many books" },
-    { description: "Accessible Everywhere" },
-    { description: "Easy on the eyes" },
-    { description: "Affordable in the long run" },
+    { description: "Highly Qualified Tutors" },
+    { description: "Peer to Peer learning" },
+    { description: "Unlimited time of meeting" },
+    { description: "Unlimited Requests" },
+    { description: "Schedule of meeting flexible for student" },
   ];
   return (
     <Container fluid style={{}}>
