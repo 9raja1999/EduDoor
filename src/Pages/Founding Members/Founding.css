@@ -1,0 +1,44 @@
+/* .userAgreement_container .ParagraphColumn{
+    background-image: url(../Assets//Companybg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+.cross{
+    
+    color: #072A52;
+    /* background-color: #072A52; */
+    font-size: 42px;
+}
+.cross:hover{
+    color : #FFC300;
+}
+.foundingMembers_container .HeadingColumn{
+    border : 1px solid red;
+    margin : 5% auto;
+    margin-bottom: 0%;
+}
+.FoundingHead{
+    /* border : 1px solid red; */
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.FoundingHead h1{
+    font-weight: 900;
+    text-align: center;
+    font-size: 32px;
+    color: #072A52;
+}
+.FoundingHead h1 span{
+    color : #ffc300
+}
+.foundingMembers{
+    background-image: url(../../Assets/Companybg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.membersName{
+    color : #072A52;
+    font-weight: 900;
+    font-size: 22px;
+}

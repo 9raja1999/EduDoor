@@ -29,9 +29,9 @@ function Login() {
     e.preventDefault();
     let verify;
     if(email == '' || password == ''){
-      alert('All fields are mandatory')
+      Swal.fire({type:'error' , text : 'All fields are mandatory'})
     }
-
+    
     users.every(obj => {
       if((obj.mailingAddress == email)&&(obj.password == password)&&(obj.status == true)){
         window.localStorage.setItem('currUser', JSON.stringify({status : obj.status}));
@@ -41,18 +41,17 @@ function Login() {
       window.localStorage.setItem('currUser', JSON.stringify({status : false}));
       return true
     })
-
+    
     verify = JSON.parse(window.localStorage.getItem('currUser'))
     if(verify.status == false){
       Swal.fire({type : 'error' , text : "You don't have access try contacting the admin"})
     }else if(verify.status == true){
       navigate('/Dashboard')
     }else if(email == '' && password == ''){
-      Swal.fire({type : 'error' , text : 'All fields are mandatory'})
+      Swal.fire({type:'error' , text : 'All fields are mandatory'})
     }
-    console.log(verify);    
+    // console.log(verify);    
   }
-  console.log(users);
 
   return (
     // <AuthProvider>

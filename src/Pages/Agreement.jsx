@@ -2,8 +2,7 @@ import React from "react";
 import { Container, Row, Col, Navbar, Form, Button, Modal } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import CollaborationDataDervice from '../Services/CollaborationDB';
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import Swal from 'sweetalert2';
 import colaborationImage from "../Assets/Collaboration/collaboration.jpg";
 import "../Styles/Agreement.css";
 import { async } from "@firebase/util";

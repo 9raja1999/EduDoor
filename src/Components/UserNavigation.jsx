@@ -9,7 +9,8 @@ function UserNavigation(props) {
   // console.log(user);
   // localStorage.setItem('items', JSON.stringify(user));
   const handleLogOut = () => {
-    window.localStorage.setItem('currUser',JSON.stringify({status : false}))
+    // window.localStorage.setItem('currUser',JSON.stringify({status : false}))
+    window.localStorage.clear();
     navigate('/');
   };
   return (
