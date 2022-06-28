@@ -11,6 +11,7 @@ import DonateNow from "../Views/DonateNow";
 import GetInTouch from "../Views/GetInTouch";
 import Footer from "../Views/Footer";
 import PositionHolders from "../Views/PositionHolders";
+import PartnerSchools from '../Views/Partner Schools/PartnerSchools';
 import Rateus from "../Components/Rateus";
 import {Modal} from 'react-bootstrap'
 
@@ -41,7 +42,8 @@ function Home() {
       </div>
       <Testimonial />
       <Collaboration />
-      <PositionHolders />
+      {/* <PositionHolders /> */}
+      <PartnerSchools />
       <DonateNow />
       <GetInTouch />
       <Footer />

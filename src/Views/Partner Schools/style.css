@@ -1,0 +1,58 @@
+.PartnerSchoolContainer{
+    background-image: url(../../Assets/Companybg.svg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    /* transform: rotate(30deg); */
+}
+.Partner_heading{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    /* border: 1px solid red; */
+}
+.Partner_heading h6{
+    color: #072A52;
+    font-weight: 900;
+    font-size: 32px;
+}
+.Partner_heading hr{
+    border: 5px solid #072A52;
+    width: 20%;
+    margin: 2% auto;
+    border-radius: 15px;
+}
+.Partner_Images_Column{
+    /* border: 1px solid red; */
+    /* width: 100%; */
+    /* minheight: 60vh; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    /* min-width: 50%; */
+    /* height: 60vh; */
+    /* background-image: url(../../Assets//Companybg.svg); */
+    background-size: cover;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin : 0 auto;
+    position: relative;
+}
+
+.partner__about{
+    /* border : 1px solid red; */
+    width : 100%;
+    margin : 0 auto;
+    text-align: center;
+    background-color: rgba(174, 174, 151, 0.318);
+    /* border-radius: 15px; */
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    color : white;
+    /* font-weight: 900; */
+}
+.partner__about h1{
+    font-weight: 700;
+}

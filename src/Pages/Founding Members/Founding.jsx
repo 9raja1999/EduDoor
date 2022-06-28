@@ -14,7 +14,7 @@ const cards = [
     { image: member2, name: 'Mr. Aizaz' },
     { image: member3, name: 'Mr. Habibullah' },
     { image: member4, name: 'Mr. Safiullah' },
-    { image: member5, name: 'Mr. Sameen' },
+    { image: member5, name: 'Ms. Sameen' },
 ]
 function Founding() {
     return (
@@ -50,8 +50,8 @@ function Founding() {
                     cards.map((obj, idx) => {
                         return (
                             <Col md={4} xs={12} lg={4} style={{textAlign:'center'}}>
-                                <Card style={{ width: '18rem' , margin : '0 auto' }} className="mt-5">
-                                    <Card.Img variant="top" src={obj.image} />
+                                <Card style={{ width: '18rem' , margin : '0 auto' , border : 'none' , backgroundColor : 'transparent' }} className="mt-5">
+                                    <Card.Img variant="top" src={obj.image} style={{borderRadius:'100%' , border :  '5px solid #FFC300'}} />
                                     <Card.Body>
                                         <Card.Title><h4 className='membersName'>{obj.name}</h4></Card.Title>
                                     </Card.Body>
