@@ -12,6 +12,7 @@ import GetInTouch from "../Views/GetInTouch";
 import Footer from "../Views/Footer";
 import PositionHolders from "../Views/PositionHolders";
 import PartnerSchools from '../Views/Partner Schools/PartnerSchools';
+import Paramount from "../Views/ParamountCollaboration.jsx/Paramount";
 import Rateus from "../Components/Rateus";
 import {Modal} from 'react-bootstrap'
 
@@ -44,6 +45,7 @@ function Home() {
       <Collaboration />
       {/* <PositionHolders /> */}
       <PartnerSchools />
+      <Paramount />
       <DonateNow />
       <GetInTouch />
       <Footer />

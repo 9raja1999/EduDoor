@@ -10,14 +10,19 @@ import {
   Button,
 } from "react-bootstrap";
 
+import logo from '../Assets/logo.jpeg'
+
 import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
     <Navbar className="navigation" collapseOnSelect expand="lg" sticky="top">
-      <Container>
+      <Container style={{position : 'relative'}}>
         <Link to="/" style={{ textDecoration: "none" }}>
-          <Navbar.Brand id="brand">PARHAI CASTLE</Navbar.Brand>
+          {/* <Navbar.Brand id="brand">PARHAI CASTLE</Navbar.Brand> */}
+          <Navbar.Brand id="brand">
+            <img src={logo} width='15%' alt='Parhai Castle' style={{position : 'absolute' , top : '15%' , borderBottomColor : '#072A52' , borderBottom : '5px solid'}}/>
+          </Navbar.Brand>
         </Link>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
