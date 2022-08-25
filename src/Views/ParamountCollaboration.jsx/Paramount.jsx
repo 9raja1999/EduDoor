@@ -18,9 +18,9 @@ import four from '../../Assets/Paramount/4.jpeg'
 
 function Paramount() {
     const [imagesArray, setImagesArray] = useState([
-        one,
-        two,
         three,
+        two,
+        one,
         four
     ])
     const [displayImage, setDisplayImage] = useState(null)
@@ -31,7 +31,6 @@ function Paramount() {
 
     
     const onChange = (link, o) => {
-        // console.log(imagesArray[link])
         setDisplayImage(imagesArray[link])
     }
 
