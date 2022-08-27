@@ -13,7 +13,7 @@ function Signup() {
     mailingAddress : '',
     contactNumber : '',
     password : '',
-    status : false
+    status : true
   });
 
   const [showPass, setShowPass] = useState(false);

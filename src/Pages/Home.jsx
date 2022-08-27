@@ -14,6 +14,7 @@ import PositionHolders from "../Views/PositionHolders";
 import PartnerSchools from '../Views/Partner Schools/PartnerSchools';
 import Paramount from "../Views/ParamountCollaboration.jsx/Paramount";
 import Images from "../Views/GridImages/Images";
+import StudentData from "../Views/Books_delivered_table/StudentData";
 import DataTable from "../Views/Books_delivered_table/DataTable";
 import Rateus from "../Components/Rateus";
 
@@ -54,6 +55,7 @@ function Home() {
       {/* <PositionHolders /> */}
       <PartnerSchools />
       <Paramount />
+      <StudentData />
       <DataTable />
       <Images />
       <DonateNow />

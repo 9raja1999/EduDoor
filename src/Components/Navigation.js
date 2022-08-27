@@ -1,64 +1,70 @@
-import React from "react";
-import ReactDOM from "react-dom";
+
+import React, { useState, useEffect } from "react";
 import {
-  Container,
-  Row,
-  Col,
-  Navbar,
-  Nav,
-  NavDropdown,
-  Button,
-} from "react-bootstrap";
-
-import logo from '../Assets/logo.jpeg'
-
+  Button
+} from 'react-bootstrap'
+import { CSSTransition } from "react-transition-group";
 import { Link } from "react-router-dom";
+import "./Navigation.css";
 
-function Navigation() {
+
+export default function Navigation() {
+  const [isNavVisible, setNavVisibility] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 700px)");
+    mediaQuery.addListener(handleMediaQueryChange);
+    handleMediaQueryChange(mediaQuery);
+
+    return () => {
+      mediaQuery.removeListener(handleMediaQueryChange);
+    };
+  }, []);
+
+  const handleMediaQueryChange = mediaQuery => {
+    if (mediaQuery.matches) {
+      setIsSmallScreen(true);
+    } else {
+      setIsSmallScreen(false);
+    }
+  };
+
+  const toggleNav = () => {
+    setNavVisibility(!isNavVisible);
+  };
+
   return (
-    <Navbar className="navigation" collapseOnSelect expand="lg" sticky="top">
-      <Container style={{position : 'relative'}}>
-        <Link to="/" style={{ textDecoration: "none" }}>
-          {/* <Navbar.Brand id="brand">PARHAI CASTLE</Navbar.Brand> */}
-          <Navbar.Brand id="brand">
-            <img src={logo} width='15%' alt='Parhai Castle' style={{position : 'absolute' , top : '15%' , borderBottomColor : '#072A52' , borderBottom : '5px solid'}}/>
-          </Navbar.Brand>
-        </Link>
-        <Navbar.Toggle
-          aria-controls="responsive-navbar-nav"
-          style={{ backgroundColor: "#146eb3", color: "white" }}
-        />
-        <Navbar.Collapse
-          id="responsive-navbar-nav"
-          className="justify-content-end"
-        >
-          <Nav>
-            <Link to="/Signup">
-              <Button variant="custom" id="CreateAcc_btn">
-                Registration
-              </Button>
-            </Link>
-            <Link to="/login">
-              <Button variant="custom" id="CreateAcc_btn">
-                Login
-              </Button>
-            </Link>
-
-            {/* <NavDropdown title="Login" id="collasible-nav-dropdown">
-              <NavDropdown.Item id="nav-subdropdown">
-                <Link
-                  to="/login"
-                  style={{ textDecoration: "none", color: "#146eb3" }}
-                >
-                  Student
-                </Link>
-              </NavDropdown.Item>
-            </NavDropdown> */}
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <header className="Header">
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <img src={require("../Assets/logo.jpeg")} className="Logo" alt="logo" />
+      </Link>
+      <CSSTransition
+        in={!isSmallScreen || isNavVisible}
+        timeout={350}
+        classNames="NavAnimation"
+        unmountOnExit
+      >
+        <nav className="Nav">
+          <Link to='/'>
+            <a href="#">Home</a>
+          </Link>
+          <Link to='/Company'>
+            <a href="/">About</a>
+          </Link>
+          <Link to='/Contact'>
+            <a href="/">Contact</a>
+          </Link>
+          <Link to="/Signup">
+            <button>Registration</button>
+          </Link>
+          <Link to="/login">
+            <button>Logout</button>
+          </Link>
+        </nav>
+      </CSSTransition>
+      <button onClick={toggleNav} className="Burger">
+        🔳</button>
+    </header>
   );
 }
-
-export default Navigation;

@@ -9,6 +9,7 @@ import Company from './Pages/Company';
 import Contact from './Pages/Contact';
 import Agreement from './Pages/Agreement';
 import Founding from './Pages/Founding Members/Founding';
+import ExcelData from './Pages/ExcelData';
 // protected routes
 import Dashboard from './Pages/Dashboard';
 import TutionRequest from './Pages/Request tutions/TutionRequest';
@@ -40,6 +41,7 @@ function App() {
             <Route path='/Contact' element={<Contact />} />
             <Route path='/Agreement' element={<Agreement />} />
             <Route path='/Founding' element={<Founding />} />
+            <Route path='/DataUpload' element={<ExcelData />} />
 
             <Route
               path='/AdminPanel'
