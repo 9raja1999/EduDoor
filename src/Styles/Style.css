@@ -648,6 +648,7 @@ figure.snip1192 {
     background-image: url(../Assets/Companybg.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 150px;
 }
 .companyAbout h1{
     font-weight: 900;
@@ -669,6 +670,7 @@ figure.snip1192 {
     background-image: url(../Assets/Companybg.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 150px;
 }
 .twentyFourContact h1{
     font-weight: 900;
